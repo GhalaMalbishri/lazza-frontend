@@ -1,0 +1,96 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  display: flex;
+
+  border-style: solid;
+  border-color:  white  white var(--primary-color) white;
+
+}
+
+
+
+.header a {
+
+  color: black;
+
+  padding: 12px;
+  padding-top: 20;
+  text-decoration: none;
+  font-size: 18px;
+
+  border-radius: 4px;
+}
+
+
+
+
+.container{
+  justify-content: right;
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  border-style: solid;
+  border-color:  white  white var(--primary-color) white;
+}
+
+
+
+.lazza-logo{
+
+  background: url('../../../../assets/lazza_logo.png') 30% / cover no-repeat;
+
+  width: 159px;
+  height: 111px;
+
+}
+
+.email {
+  /*search icon*/
+  background: url('../../../../assets/search-icon.webp') 50% / contain no-repeat;
+  margin-bottom: 3px;
+  width: 28px;
+  height: 28px;
+}
+
+.ticket{
+
+  background: url('../../../../assets/avatar-icon.png') 50% / contain no-repeat;
+  margin-bottom: 3px;
+  width: 28px;
+  height: 28px;
+}
+
+.box{
+  display: flex;
+  gap: 20px;
+}
+
+  .contactCont{
+    display: flex;
+    gap: 50px;
+  }
+
+.paragraph{
+  text-align: right;
+  display: inline;
+
+}
+
+.paragraph a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.contA{
+
+ text-align: right;
+
+}

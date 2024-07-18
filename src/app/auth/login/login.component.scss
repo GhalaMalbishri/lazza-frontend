@@ -3,6 +3,7 @@
 
 * {
 	box-sizing: border-box;
+  font-family: --fontFamily;
 }
 
 body {
@@ -19,10 +20,12 @@ body {
 h1 {
 	font-weight: bold;
 	margin: 0;
+
 }
 
 h2 {
 	text-align: center;
+
 }
 
 p {
@@ -171,7 +174,7 @@ input {
 	left: -100%;
 	height: 100%;
 	width: 200%;
-  	transform: translateX(0);
+  transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
 
@@ -210,4 +213,3 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
-

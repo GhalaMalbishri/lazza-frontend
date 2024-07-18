@@ -211,3 +211,13 @@ input {
 	transform: translateX(20%);
 }
 
+.otp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.otp__input {
+  text-align: center;
+}
+

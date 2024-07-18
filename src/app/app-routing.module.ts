@@ -20,6 +20,10 @@ const routes: Routes = [
     path:'apps', component:MainLayoutComponent,
     loadChildren: () => import('./main-apps/main-apps.module').then(m => m.MainAppsModule)
   },
+  {
+    path:'apps', component:MainLayoutComponent,
+    loadChildren: () => import('./main-apps/main-apps.module').then(m => m.MainAppsModule)
+  },
 
   // ? is it here?
   {

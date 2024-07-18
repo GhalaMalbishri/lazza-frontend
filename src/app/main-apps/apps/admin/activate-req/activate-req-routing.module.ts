@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ActivatePageComponent } from './activate-page/activate-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+
+  {
+    path:'adminActivate',
+    component:ActivatePageComponent,
+    
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

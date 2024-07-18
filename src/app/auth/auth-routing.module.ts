@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-//import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignupCustomerComponent } from './signup-customer/signup-customer.component';
+import { SignupRestaurantComponent } from './signup-restaurant/signup-restaurant.component';
+import { SignupUserTypeComponent } from './signup-user-type/signup-user-type.component';
 
 const routes: Routes = [
   {
@@ -20,8 +22,18 @@ const routes: Routes = [
   },
 
   {
-    path:'signup',
-   // component:SignUpComponent
+    path:'signupCustomer',
+   component:SignupCustomerComponent
+  },
+
+  {
+    path:'signupRest',
+   component:SignupRestaurantComponent
+  },
+
+  {
+    path:'signupType',
+   component:SignupUserTypeComponent
   }
 
 

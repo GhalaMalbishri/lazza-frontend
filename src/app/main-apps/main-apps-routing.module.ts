@@ -8,9 +8,13 @@ import { MainPageComponent } from './apps/admin/home-admin/main-page/main-page.c
 import { AdminRestViewComponent } from './apps/admin/home-admin/admin-rest-view/admin-rest-view.component';
 import { AdminWalletComponent } from './apps/admin/setting/admin-wallet/admin-wallet.component';
 import { TermsConditionComponent } from './apps/admin/setting/terms-condition/terms-condition.component';
+import { CustMainPageComponent } from './apps/customer/home-customer/cust-main-page/cust-main-page.component';
 
 const routes: Routes = [
-
+  {
+    path:'activate-req',
+    loadChildren: () => import('./apps/admin/activate-req/activate-req.module').then(m => m.ActivateReqModule)
+  },
   {
     path:'adminActivate',
     component:ActivatePageComponent
@@ -49,7 +53,11 @@ const routes: Routes = [
   component:TermsConditionComponent
 },
 
-
+// ----------------------------
+{
+  path:'customerHome',
+  component:CustMainPageComponent
+}
 
 ];
 

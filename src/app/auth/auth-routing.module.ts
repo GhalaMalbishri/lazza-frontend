@@ -6,6 +6,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupCustomerComponent } from './signup-customer/signup-customer.component';
 import { SignupRestaurantComponent } from './signup-restaurant/signup-restaurant.component';
 import { SignupUserTypeComponent } from './signup-user-type/signup-user-type.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { WriteOtpComponent } from './write-otp/write-otp.component';
 
 const routes: Routes = [
   {
@@ -34,6 +36,16 @@ const routes: Routes = [
   {
     path:'signupType',
    component:SignupUserTypeComponent
+  }
+  ,
+  {
+    path:'reset-password',
+    component:ResetpasswordComponent
+  }
+  ,
+  {
+    path:'write-otp',
+    component:WriteOtpComponent
   }
 
 

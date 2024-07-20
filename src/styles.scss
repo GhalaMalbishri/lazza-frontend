@@ -4,7 +4,7 @@
 
   --primary-color: #DC4727;
 
-  
+
 
 
   --light-grey-color:#F6F6F6;
@@ -12,4 +12,9 @@
   --text-color: #2d2d2d;
 
   --fontFamily: "Tajawal";
+}
+
+body
+{
+  font-family: var(--fontFamily);
 }

@@ -6,6 +6,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SideBarComponent } from './layout/side-bar/side-bar.component';
+import { RestaurantAdminHeaderComponent } from './layout/restaurant-admin-header/restaurant-admin-header.component';
 
 
 
@@ -15,6 +16,7 @@ import { SideBarComponent } from './layout/side-bar/side-bar.component';
     MainLayoutComponent,
     HeaderComponent,
     SideBarComponent,
+    RestaurantAdminHeaderComponent,
 
   ],
   imports: [
@@ -22,4 +24,6 @@ import { SideBarComponent } from './layout/side-bar/side-bar.component';
     MainAppsRoutingModule
   ]
 })
-export class MainAppsModule { }
+export class MainAppsModule {
+
+}

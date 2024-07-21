@@ -11,7 +11,7 @@ import { UserOrderComponent } from './user-order/user-order.component';
   ],
   imports: [
     CommonModule,
-    OrdersRestaurantRoutingModule
+    OrdersRestaurantRoutingModule,
   ]
 })
 export class OrdersRestaurantModule { }

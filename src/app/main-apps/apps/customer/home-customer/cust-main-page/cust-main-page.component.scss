@@ -1,0 +1,168 @@
+
+
+/* remove card style when component works, from here */
+.Card-container{
+  background-color: var(--light-grey-color);
+
+  border-radius: 20px;
+  display: flex;
+  width: 20%;
+  height: 40%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+  box-shadow:  0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  }
+
+  .Card-container:hover {
+    transform: scale(1.05); /* Increase the scale on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a drop shadow on hover */
+  }
+
+  h6{
+    margin-bottom: 10%;
+  }
+
+  .restImg{
+   background-color: var( --card-img-color);
+   border-radius: 20px;
+   display: flex;
+   flex-direction: row;
+   height: auto;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+
+  }
+
+  .restImg >div{
+  align-self: self-start;
+  margin: 10px;
+  }
+
+  .restImg >img{
+    max-width: 70%;
+    max-height: 70%;
+    display: flex;
+    padding-top: 10%;
+    padding-right: 30%;
+
+   }
+
+   .evaluate-stars{
+    background-color: var(--light-grey-color);
+    border-radius: 0.5rem;
+    display: flex;
+    color: var(--evaluateStar-color);
+    width: 25%;
+    height: auto;
+    font-size: 1rem;
+
+    justify-content: space-around;
+    padding: 3%;
+
+
+
+   }
+
+   .evaluate-stars >img{
+    max-width: 30%;
+    max-height: 30%;
+
+   }
+
+/* to here */
+
+
+/* map */
+.MapContainer{
+  height: 400px;
+   width: 100%;
+   background-color: var(--light-grey-color);
+    padding: auto;
+     border-radius: 25px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.MapContainer img{
+  max-width: 160%;
+  max-height: 110%;
+}
+
+.MapDescription{
+   justify-items: end;
+   padding-right: 5%;
+}
+
+.MapDescription  :nth-child(2){
+  color: black;
+  font-size: 1.5rem;
+}
+
+
+/* some resturants*/
+.someRestaurants
+{
+  display: flex;
+  padding-bottom: 5%;
+  justify-content: center;
+}
+
+.labelsContaner{
+display: flex;
+justify-content: space-evenly;
+
+}
+
+.labelsContaner a{
+  text-decoration: none;
+}
+
+.viewMore{
+  align-self: flex-start;
+}
+.restsLabel{
+  align-self: self-end;
+  padding-left: 70%;
+}
+
+/* banner*/
+
+.ads-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 1rem;
+  padding: auto;
+  margin-top: 3%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-color); /* Set the background color to red */
+}
+
+.ads-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ads-item.active {
+  opacity: 1;
+}
+
+.ads-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

@@ -1,9 +1,5 @@
 * {box-sizing: border-box;}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .header {
   display: flex;
@@ -29,16 +25,41 @@ body {
 
 
 .container{
-  justify-content: right;
+  justify-content: space-between;
   height: 100px;
+  width: 100%;
   display: flex;
   align-items: center;
-
+ 
   border-style: solid;
   border-color:  white  white var(--primary-color) white;
+
+
 }
 
+.container a{
+  text-decoration: none;
+  color: black;
 
+}
+
+.container  :nth-child(1){
+  padding-top: 1%;
+
+
+}
+.container  :nth-child(2){
+ max-width: 30%;
+ max-height: 30%;
+ padding-right: 28%;
+
+}
+
+.container  :nth-child(3){
+  padding-left: 3%;
+
+
+}
 
 .lazza-logo{
 
@@ -49,13 +70,7 @@ body {
 
 }
 
-.email {
-  /*search icon*/
-  background: url('../../../../assets/search-icon.webp') 50% / contain no-repeat;
-  margin-bottom: 3px;
-  width: 28px;
-  height: 28px;
-}
+
 
 .ticket{
 
@@ -92,3 +107,5 @@ body {
  text-align: right;
 
 }
+
+

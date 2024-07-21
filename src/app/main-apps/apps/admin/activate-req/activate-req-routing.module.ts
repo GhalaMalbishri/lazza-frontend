@@ -4,7 +4,12 @@ import { ActivatePageComponent } from './activate-page/activate-page.component';
 
 const routes: Routes = [
 
- 
+  {
+    path: 'list',
+    component: ActivatePageComponent,
+
+  }
+
 ];
 
 @NgModule({

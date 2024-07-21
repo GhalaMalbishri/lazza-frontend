@@ -3,12 +3,13 @@ body{
 }
 .sidebar{
   position: fixed;
+  border-radius: 1rem;
   width: 250px;
   top:0;
   right: 0;
   bottom: 0;
   background: white;
-  border: #DC4728 solid;
+  border:var(--primary-color) solid;
   padding-top: 50px;
 }
 
@@ -33,6 +34,7 @@ body{
   text-decoration: none;
   font-family: --fontFamily;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .sidebar a:hover{

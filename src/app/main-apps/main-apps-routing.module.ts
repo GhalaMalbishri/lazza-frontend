@@ -79,24 +79,28 @@ const routes: Routes = [
 
 // customer
 {
-  path:'Customerhome',
-  component:CustMainPageComponent
+  path:'customer-home',
+  loadChildren: () => import('./apps/customer/home-customer/home-customer.module').then(m => m.HomeCustomerModule)
 },
+
 
 {
   path:'current-orders',
-  component:CurrentOrdersComponent
+  loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
+
 
 {
   path:'previous-orders',
-  component:PreviouseOrdersComponent
+  loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
 
 {
   path:'customer-wallet',
   component:CustomerWalletComponent
 },
+
+
 
 {
   path:'customer-profile',

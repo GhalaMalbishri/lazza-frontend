@@ -12,7 +12,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
+	font-family: --fontFamily;
 	height: 100vh;
 	margin: -20px 0 50px;
 }
@@ -49,8 +49,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #DC4727;
+	background-color: #DC4727;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -165,7 +165,7 @@ input {
 .overlay {
 	background: #DC4727;
 
-	background: linear-gradient(to right, #DC4727, #dd395f);
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

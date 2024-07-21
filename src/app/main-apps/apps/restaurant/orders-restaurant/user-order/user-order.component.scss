@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  font-family: --fontFamily;
+}
+
+.orders-text{
+  position: relative;
+  left: 950px;
+  top: 60px;
+}
+// .container {
+//   display: flex;
+//   width: 80%;
+// }
+
+// .content {
+//   width: 80%;
+//   padding: 20px;
+// }
+
+// .center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 20px;
+// }
+
+// table {
+//   width: 100%;
+//   border-collapse: collapse;
+//   margin: 20px 0;
+//   font-size: 18px;
+//   text-align: center;
+//   direction: rtl;
+// }
+
+// th, td {
+//   padding: 12px;
+//   border: 1px solid #ddd;
+// }
+
+// th {
+//   background-color: #f2f2f2;
+//   font-weight: bold;
+// }
+
+// td {
+//   text-align: center;
+// }
+
+// button.status, button.details {
+//   padding: 10px 20px;
+//   font-size: 16px;
+//   margin: 5px;
+//   cursor: pointer;
+//   border: none;
+//   border-radius: 5px;
+// }
+
+// button.accept {
+//   background-color: #4CAF50;
+//   color: white;
+// }
+
+// button.refuse {
+//   background-color: #f44336;
+//   color: white;
+// }
+
+// button.details {
+//   background-color: #2196F3;
+//   color: white;
+// }
+
+// button.status:hover, button.details:hover {
+//   opacity: 0.8;
+// }

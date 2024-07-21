@@ -27,6 +27,7 @@ import { ViewApdateProductComponent } from './apps/restaurant/meals-restaurant/v
 import { UserOrderComponent } from './apps/restaurant/orders-restaurant/user-order/user-order.component';
 import { CustToRestaurantComponent } from './apps/restaurant/tech-support-restaurant/cust-to-restaurant/cust-to-restaurant.component';
 import { RestaurantToAdminComponent } from './apps/restaurant/tech-support-restaurant/restaurant-to-admin/restaurant-to-admin.component';
+import { SideBarComponent } from './layout/side-bar/side-bar.component';
 
 const routes: Routes = [
    //Admin

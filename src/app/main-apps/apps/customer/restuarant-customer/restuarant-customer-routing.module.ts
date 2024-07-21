@@ -4,9 +4,14 @@ import { ViewRestaurantComponent } from './view-restaurant/view-restaurant.compo
 
 const routes: Routes = [
   {
-    path:"view",
+    path:'rest',
+    loadChildren: () => import('./restaurant/restaurant.module').then(m => m.RestaurantModule)
+  },
+
+  {
+    path:'Viewrest-list',
     component:ViewRestaurantComponent
-  }
+  },
 ];
 
 @NgModule({

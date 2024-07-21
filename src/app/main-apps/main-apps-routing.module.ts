@@ -95,37 +95,43 @@ const routes: Routes = [
   loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
 
+
 {
   path:'customer-wallet',
-  component:CustomerWalletComponent
+  loadChildren: () => import('./apps/customer/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule)
 },
-
 
 
 {
   path:'customer-profile',
-  component:ProfileComponent
+  loadChildren: () => import('./apps/customer/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule)
 },
+
+
 
 {
   path:'customer-cart',
-  component:CartComponent
+  loadChildren: () => import('./apps/customer/restuarant-customer/restaurant/restaurant.module').then(m => m.RestaurantModule)
 },
+
+
 
 {
   path:'customer-payment',
-  component:PaymentComponent
+  loadChildren: () => import('./apps/customer/restuarant-customer/restaurant/restaurant.module').then(m => m.RestaurantModule)
 },
+
 
 {
   path:'customer-restaurant-products',
-  component:ProductsComponent
+  loadChildren: () => import('./apps/customer/restuarant-customer/restaurant/restaurant.module').then(m => m.RestaurantModule)
 },
 
 {
   path:'customer-view-restaurant',
-  component:ViewRestaurantComponent
+  loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
+
 
 //restaurant
 {

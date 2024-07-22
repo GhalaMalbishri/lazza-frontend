@@ -1,111 +1,98 @@
-* {box-sizing: border-box;}
 
 
-.header {
-  display: flex;
-  border-style: solid;
-  border-color:  white  white var(--primary-color) white;
+
+
+header {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+
+
+}
+
+
+.main-heading {
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+
+.main-heading h1 {
+  font-size: 50px;
 }
 
 
 
+
+
+.header {
+  overflow: hidden;
+  border-bottom: #DC4728 solid;;
+  padding: 10px 20px;
+}
+
+
+.header img {
+  width: 50px;
+}
+
+
 .header a {
-
-  color: black;
-
+  float: left;
+  color: rgb(3, 3, 3);
+  text-align: center;
   padding: 12px;
-  padding-top: 20;
   text-decoration: none;
   font-size: 18px;
-
+  line-height: 25px;
   border-radius: 4px;
 }
 
 
 
 
-.container{
-  justify-content: space-between;
-  height: 100px;
-  width: 100%;
+input[type=”text” i]{
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-color: #123;
+  border-color: white;
+  margin-right: 30px;
+  border: 0;
+}
+
+
+.book-button{
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+
+
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 !important;
+}
+
+
+.header-right {
+  float: right;
   display: flex;
   align-items: center;
- 
-  border-style: solid;
-  border-color:  white  white var(--primary-color) white;
-
-
-}
-
-.container a{
-  text-decoration: none;
-  color: black;
-
-}
-
-.container  :nth-child(1){
-  padding-top: 1%;
-
-
-}
-.container  :nth-child(2){
- max-width: 30%;
- max-height: 30%;
- padding-right: 28%;
-
-}
-
-.container  :nth-child(3){
-  padding-left: 3%;
-
-
-}
-
-.lazza-logo{
-
-  background: url('../../../../assets/lazza_logo.png') 30% / cover no-repeat;
-
-  width: 159px;
-  height: 111px;
-
 }
 
 
-
-.ticket{
-
-  background: url('../../../../assets/avatar-icon.png') 50% / contain no-repeat;
-  margin-bottom: 3px;
-  width: 28px;
-  height: 28px;
-}
-
-.box{
-  display: flex;
-  gap: 20px;
-}
-
-  .contactCont{
-    display: flex;
-    gap: 50px;
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 
-.paragraph{
-  text-align: right;
-  display: inline;
 
+  .header-right {
+    float: none;
+  }
 }
-
-.paragraph a{
-  text-decoration: none;
-  color: black;
-}
-
-
-.contA{
-
- text-align: right;
-
-}
-
-

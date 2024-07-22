@@ -4,9 +4,10 @@ import { HomeDashboardComponent } from './home-dashboard/home-dashboard.componen
 
 const routes: Routes = [
   {
-    path: 'restaurant-home-list',
+    path:'restaurantHome-list',
     component:HomeDashboardComponent
   }
+
 ];
 
 @NgModule({

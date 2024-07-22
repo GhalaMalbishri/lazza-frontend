@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdsRestaurantRoutingModule } from './ads-restaurant-routing.module';
 import { RequestAdComponent } from './request-ad/request-ad.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RequestAdComponent } from './request-ad/request-ad.component';
   ],
   imports: [
     CommonModule,
-    AdsRestaurantRoutingModule
+    AdsRestaurantRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class AdsRestaurantModule { }

@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustMainPageComponent } from './cust-main-page/cust-main-page.component';
 
 const routes: Routes = [
- 
+  {
+    path:'Customerhome-list',
+    component:CustMainPageComponent
+  },
 ];
 
 @NgModule({

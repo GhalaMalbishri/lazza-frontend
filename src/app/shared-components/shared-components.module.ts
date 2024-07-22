@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {  CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ButtonComponent } from './button/button.component';
@@ -18,18 +18,24 @@ import { CardDetailsComponent } from './card-details/card-details.component';
     ProductCardComponent,
     InputTextComponent,
     RestaurantCardComponent,
-    CardDetailsComponent
+
 
   ],
   imports: [
     CommonModule,
-    RouterModule // added this for ?
+    RouterModule // added this for ?//
   ],
   //added this:
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports: [
-    RestaurantCardComponent
-  ]
+   exports: [
+    ButtonComponent,
+    ProductCardComponent,
+    InputTextComponent,
+    RestaurantCardComponent,
+    
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
+
 
 
 })

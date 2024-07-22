@@ -3,11 +3,11 @@
 
 * {
 	box-sizing: border-box;
-  
+
 }
 
 body {
-	background: #f6f5f7;
+	background: var(--Background);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,16 +16,39 @@ body {
 	height: 100vh;
 	margin: -20px 0 50px;
 }
+.join-us{
+  color: var(--primary-color);
+}
+.input{
+  width: 350px;
+  border-radius: 10px;
+}
+
+input[type="email"]::placeholder
+ {
+  text-align: right;
+ }
+input[type="password"]::placeholder
+ {
+  text-align: right;
+ }
 
 h1 {
 	font-weight: bold;
 	margin: 0;
-
+}
+.sign-in-text{
+  position: relative;
+  bottom: 50px;
 }
 
 h2 {
 	text-align: center;
 
+}
+
+h6{
+  margin-top: 20px;
 }
 
 p {
@@ -44,7 +67,11 @@ a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
-	margin: 15px 0;
+	margin: 15px 0 ;
+}
+a:hover{
+	color: var(--primary-color)
+
 }
 
 button {

@@ -3,26 +3,39 @@
 
 * {
 	box-sizing: border-box;
-  font-family: --fontFamily;
+
 }
 
 body {
-	background: #f6f5f7;
+	background: var(--Background);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	font-family: --fontFamily;
 	height: 100vh;
 	margin: -20px 0 50px;
+}
+.join-us{
+  color: var(--primary-color);
 }
 
 h1 {
 	font-weight: bold;
 	margin: 0;
 }
+.sign-in-text{
+  position: relative;
+  bottom: 50px;
+}
 
 h2 {
 	text-align: center;
+
+}
+
+h6{
+  margin-top: 20px;
 }
 
 p {
@@ -41,13 +54,13 @@ a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
-	margin: 15px 0;
+	margin: 15px 0 ;
 }
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #DC4727;
+	background-color: #DC4727;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -160,7 +173,7 @@ input {
 }
 
 .overlay {
-	background: var(--primary-color);
+	background: #DC4727;
 
 
 	background-repeat: no-repeat;
@@ -171,29 +184,9 @@ input {
 	left: -100%;
 	height: 100%;
 	width: 200%;
-  	transform: translateX(0);
+  transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
-.input{
-  width: 350px;
-  border-radius: 10px;
-}
-input[type="email"]::placeholder
- {
-  text-align: right;
- }
-input[type="password"]::placeholder
- {
-  text-align: right;
- }
-input[type="text"]::placeholder
- {
-  text-align: right;
- }
-input[type="number"]::placeholder
- {
-  text-align: right;
- }
 
 .container.right-panel-active .overlay {
   	transform: translateX(50%);
@@ -213,7 +206,10 @@ input[type="number"]::placeholder
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
-
+.types{
+  display: flex;
+  gap: 80px;
+}
 .overlay-left {
 	transform: translateX(-20%);
 }
@@ -230,4 +226,3 @@ input[type="number"]::placeholder
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
-

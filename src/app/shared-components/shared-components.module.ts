@@ -16,7 +16,8 @@ import { RouterModule } from '@angular/router';
     ButtonComponent,
     ProductCardComponent,
     InputTextComponent,
-    RestaurantCardComponent
+    RestaurantCardComponent,
+    
 
   ],
   imports: [

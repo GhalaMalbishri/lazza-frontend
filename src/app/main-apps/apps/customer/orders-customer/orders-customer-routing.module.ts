@@ -9,9 +9,9 @@ const routes: Routes = [
     component:CurrentOrdersComponent
   },
   {
-    path:'Customerhome-list',
+    path:'previousOrder-list',
     component:PreviouseOrdersComponent
-  },
+  }
 
 ];
 

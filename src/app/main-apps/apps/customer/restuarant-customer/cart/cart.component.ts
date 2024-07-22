@@ -6,8 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  arr: any
+  constructor() {
+    this.arr = [
+      {
+        price: 15,
+        meal: "Burger",
+      },
+      {
+        price: 15,
+        meal: "Burger",
+      },
+      {
+        price: 15,
+        meal: "Burger",
+      },
 
-  constructor() { }
+    ]
+  }
 
   ngOnInit(): void {
   }

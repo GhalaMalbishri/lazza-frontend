@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "lazza"
+  "defaultProject": "lazza",
+  "cli": {
+    "analytics": "f7500b60-a00a-4f78-9602-bcc1c73feebe"
+  }
 }

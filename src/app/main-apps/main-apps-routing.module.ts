@@ -149,43 +149,29 @@ const routes: Routes = [
 //-------------- restaurant -----------------
 {
   path:'restaurant-ads',
-  component:RequestAdComponent
+  loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
 },
 
 {
   path:'restaurant-home',
-  component:HomeDashboardComponent
+  loadChildren: () => import('./apps/restaurant/home-restaurant/home-restaurant.module').then(m => m.HomeRestaurantModule)
 },
-
 {
-  path:'restaurant-add-products',
-  component:AddProductComponent
-},
-
-{
-  path:'restaurant-view-update-products',
-  component:ViewApdateProductComponent
+  path:'meals-restaurant',
+  loadChildren: () => import('./apps/restaurant/meals-restaurant/meals-restaurant.module').then(m => m.MealsRestaurantModule)
 },
 
 {
   path:'restaurant-user-order',
-  component:UserOrderComponent
+  loadChildren: () => import('./apps/restaurant/orders-restaurant/orders-restaurant.module').then(m => m.OrdersRestaurantModule)
 },
 
-{
-  path:'restaurant-user-order',
-  component:UserOrderComponent
-},
 
 {
-  path:'cust-to-restaurant',
-  component:CustToRestaurantComponent
+  path:'tech-support-restaurant',
+  loadChildren: () => import('./apps/restaurant/tech-support-restaurant/tech-support-restaurant.module').then(m => m.TechSupportRestaurantModule)
 },
 
-{
-  path:'restaurant-to-admin',
-  component:RestaurantToAdminComponent
-},
 
 
 

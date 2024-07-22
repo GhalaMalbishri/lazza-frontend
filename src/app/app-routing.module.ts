@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './main-apps/layout/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { CartComponent } from './main-apps/apps/customer/restuarant-customer/restaurant/cart/cart.component';
+import { CardDetailsComponent } from './shared-components/card-details/card-details.component';
 
 const routes: Routes = [
 
@@ -26,7 +28,15 @@ const routes: Routes = [
   {
     path:'homePage',
     loadChildren: () => import('./home-page/home-page.component').then(m => m.HomePageComponent)
+  },
+
+  {
+    path:'card-details',
+    component:CardDetailsComponent
   }
+
+
+
 ];
 
 @NgModule({

@@ -1,4 +1,30 @@
-<h1 class="orders-text">الطلبات المرسله</h1>
+<div class="main">
+
+  <table>
+    <tr>
+   
+      <th>اسم العميل</th>
+      <th>رقم الطلب</th>
+      <th>رقم العميل</th>
+      <th>التفاصيل</th>
+      <th>الحاله</th>
+    </tr>
+
+    <tr *ngFor="let i of arr">
+      <td>{{i.name}}</td>
+      <td>{{i.ornum}}</td>
+      <td>{{i.custnum}}</td>
+      <td><button class="details">التفاصيل</button></td>
+      <td><button class="status refuse">رفض</button>
+        <button class="status accept">قبول</button></td>
+    </tr>
+  </table>
+
+</div>
+
+
+
+<!-- <h1 class="orders-text">الطلبات المرسله</h1> -->
 
 <!-- <div class="container">
   <div class="content">

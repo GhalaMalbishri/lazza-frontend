@@ -17,7 +17,7 @@ import { RouterModule } from '@angular/router';
     ProductCardComponent,
     InputTextComponent,
     RestaurantCardComponent,
-    
+
 
   ],
   imports: [
@@ -30,6 +30,7 @@ import { RouterModule } from '@angular/router';
     ProductCardComponent,
     InputTextComponent,
     RestaurantCardComponent,
+    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

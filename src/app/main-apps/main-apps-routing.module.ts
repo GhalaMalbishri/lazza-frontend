@@ -147,14 +147,23 @@ const routes: Routes = [
 
 
 //-------------- restaurant -----------------
+
+//correct, path: apps/restaurant-ads/restaurantAds-list
 {
   path:'restaurant-ads',
-  component:RequestAdComponent
+  loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
 },
 
 {
   path:'restaurant-home',
   component:HomeDashboardComponent
+},
+
+
+//correct, path: apps/restaurant-home/restaurantHome-list
+{
+  path:'restaurant-home',
+  loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
 },
 
 {

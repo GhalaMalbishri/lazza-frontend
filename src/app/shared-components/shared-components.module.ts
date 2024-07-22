@@ -31,6 +31,7 @@ import { CardDetailsComponent } from './card-details/card-details.component';
     ProductCardComponent,
     InputTextComponent,
     RestaurantCardComponent,
+    
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

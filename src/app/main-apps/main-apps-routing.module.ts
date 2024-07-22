@@ -147,6 +147,8 @@ const routes: Routes = [
 
 
 //-------------- restaurant -----------------
+
+//correct, path: apps/restaurant-ads/restaurantAds-list
 {
   path:'restaurant-ads',
   loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
@@ -156,6 +158,14 @@ const routes: Routes = [
   path:'restaurant-home',
   loadChildren: () => import('./apps/restaurant/home-restaurant/home-restaurant.module').then(m => m.HomeRestaurantModule)
 },
+
+
+//correct, path: apps/restaurant-home/restaurantHome-list
+{
+  path:'restaurant-home',
+  loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
+},
+
 {
   path:'meals-restaurant',
   loadChildren: () => import('./apps/restaurant/meals-restaurant/meals-restaurant.module').then(m => m.MealsRestaurantModule)

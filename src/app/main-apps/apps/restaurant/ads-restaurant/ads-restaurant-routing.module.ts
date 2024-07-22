@@ -4,7 +4,7 @@ import { RequestAdComponent } from './request-ad/request-ad.component';
 
 const routes: Routes = [
   {
-    path:'ads-restaurant-list',
+    path:'restaurantAds-list',
     component:RequestAdComponent
   }
 ];

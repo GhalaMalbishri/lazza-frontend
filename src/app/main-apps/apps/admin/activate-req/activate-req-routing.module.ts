@@ -5,9 +5,8 @@ import { ActivatePageComponent } from './activate-page/activate-page.component';
 const routes: Routes = [
 
   {
-    path: 'list',
-    component: ActivatePageComponent,
-
+    path:'adminActivate-list',
+    component:ActivatePageComponent
   }
 
 ];

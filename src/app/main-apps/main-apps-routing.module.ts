@@ -12,14 +12,7 @@ import { HomeCustomerRoutingModule } from './apps/customer/home-customer/home-cu
 import { CustMainPageComponent } from './apps/customer/home-customer/cust-main-page/cust-main-page.component';
 import { ViewUsersComponent } from './apps/admin/user-manage/view-users/view-users.component';
 import { ViewUsersDetailsComponent } from './apps/admin/user-manage/view-users-details/view-users-details.component';
-import { CurrentOrdersComponent } from './apps/customer/orders-customer/current-orders/current-orders.component';
-import { PreviouseOrdersComponent } from './apps/customer/orders-customer/previouse-orders/previouse-orders.component';
-import { CustomerWalletComponent } from './apps/customer/profile-customer/customer-wallet/customer-wallet.component';
 import { ProfileComponent } from './apps/customer/profile-customer/profile/profile.component';
-import { CartComponent } from './apps/customer/restuarant-customer/restaurant/cart/cart.component';
-import { PaymentComponent } from './apps/customer/restuarant-customer/restaurant/payment/payment.component';
-import { ProductsComponent } from './apps/customer/restuarant-customer/restaurant/products/products.component';
-import { ViewRestaurantComponent } from './apps/customer/restuarant-customer/view-restaurant/view-restaurant.component';
 import { RequestAdComponent } from './apps/restaurant/ads-restaurant/request-ad/request-ad.component';
 import { HomeDashboardComponent } from './apps/restaurant/home-restaurant/home-dashboard/home-dashboard.component';
 import { AddProductComponent } from './apps/restaurant/meals-restaurant/add-product/add-product.component';
@@ -27,109 +20,133 @@ import { ViewApdateProductComponent } from './apps/restaurant/meals-restaurant/v
 import { UserOrderComponent } from './apps/restaurant/orders-restaurant/user-order/user-order.component';
 import { CustToRestaurantComponent } from './apps/restaurant/tech-support-restaurant/cust-to-restaurant/cust-to-restaurant.component';
 import { RestaurantToAdminComponent } from './apps/restaurant/tech-support-restaurant/restaurant-to-admin/restaurant-to-admin.component';
-import { SideBarComponent } from './layout/side-bar/side-bar.component';
 
 const routes: Routes = [
-   //Admin
-  {
-    path:'adminActivate',
-    component:ActivatePageComponent
-  },
-  //     loadChildren: () => import('.apps/admin/activate-req/activate-req.module').then(m => m.)
 
+  //---------------- Admin ----------------------
 
+//correct, path: apps/admin-activate/adminActivate-list
   {
-    path:'adminDashboared',
-    component:AdminDashboaredComponent
+    path:'admin-activate',
+    loadChildren: () => import('./apps/admin/activate-req/activate-req.module').then(m => m.ActivateReqModule)
   },
 
+
+  //correct, path: apps/admin-dashboared/adminDashboared-list
   {
-    path:'adminAds',
-    component:AdsPageComponent
+    path:'admin-dashboared',
+    loadChildren: () => import('./apps/admin/admin-dashboared/admin-dashboared.module').then(m => m.AdminDashboaredModule)
   },
 
+
+
+  //correct, path: apps/admin-ads/adminAds-list
   {
-    path:'adminHome',
-    component:MainPageComponent
+    path:'admin-ads',
+    loadChildren: () => import('./apps/admin/ads-req/ads-req.module').then(m => m.AdsReqModule)
   },
 
-  {
-    path:'adminViewRest',
-    component:AdminRestViewComponent
-  },
 
+//correct, path: apps/admin-home-main/adminHomeMain-list
 {
-  path:'adminWallet',
-  component:AdminWalletComponent
+  path:'admin-home-main',
+  loadChildren: () => import('./apps/admin/home-admin/home-admin.module').then(m => m.HomeAdminModule)
 },
 
+  //correct, path: apps/admin-home-ViewRest/adminHomeViewRest-list
 {
-  path:'adminTerms',
-  component:TermsConditionComponent
+  path:'admin-home-ViewRest',
+  loadChildren: () => import('./apps/admin/home-admin/home-admin.module').then(m => m.HomeAdminModule)
 },
+
+
+//correct, path: apps/admin-wallet/adminWallet-list
+{
+  path:'admin-wallet',
+  loadChildren: () => import('./apps/admin/setting/setting.module').then(m => m.SettingModule)
+},
+
+
+//correct, path: apps/admin-terms/adminTerms-list
+{
+  path:'admin-terms',
+  loadChildren: () => import('./apps/admin/setting/setting.module').then(m => m.SettingModule)
+},
+
+
+//correct, path: apps/admin-view-users/adminViewUsers-list
 {
   path:'admin-view-users',
-  component:ViewUsersComponent
+  loadChildren: () => import('./apps/admin/user-manage/user-manage.module').then(m => m.UserManageModule)
 },
+
+
+//correct, path: apps/admin-user-details/adminUserDetails-list
 {
   path:'admin-user-details',
-  component:ViewUsersDetailsComponent
+  loadChildren: () => import('./apps/admin/user-manage/user-manage.module').then(m => m.UserManageModule)
 },
 
 
-// customer
+
+//---------------- customer ----------------------
+
+//correct, path: apps/customer-home/customerhome-list
 {
-  path:'Customerhome',
-  component:CustMainPageComponent
+  path:'customer-home',
+  loadChildren: () => import('./apps/customer/home-customer/home-customer.module').then(m => m.HomeCustomerModule)
 },
 
+//correct, path: apps/current-orders/currentOrder-list
 {
   path:'current-orders',
-  component:CurrentOrdersComponent
+  loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
 
+//correct, path: apps/previous-orders/previousOrder-list
 {
   path:'previous-orders',
-  component:PreviouseOrdersComponent
+  loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
 
+//correct, path: apps/customer-wallet/customerWallet-list
 {
   path:'customer-wallet',
-  component:CustomerWalletComponent
+  loadChildren: () => import('./apps/customer/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule)
 },
 
+//correct, path: apps/customer-profile/CustomerProfile-list
 {
   path:'customer-profile',
-  component:ProfileComponent
+  loadChildren: () => import('./apps/customer/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule)
 },
 
+//correct, path: apps/customer-cart/customerCart-list
 {
   path:'customer-cart',
-  component:CartComponent
+  loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
-// just for now , take all updates from ghala
-// {
-//   path:'restuarant-customer',
-//   loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
-// },
-
+//correct, path: apps/customer-payment/customerPayment-list
 {
   path:'customer-payment',
-  component:PaymentComponent
+  loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
+//correct, path: apps/customer-products/customerProducts-list
 {
-  path:'customer-restaurant-products',
-  component:ProductsComponent
+  path:'customer-products',
+  loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
+//correct, path: apps/customer-view-rest/customerViewRest-list
 {
-  path:'customer-view-restaurant',
-  component:ViewRestaurantComponent
+  path:'customer-view-rest',
+  loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
-//restaurant
+
+//-------------- restaurant -----------------
 {
   path:'restaurant-ads',
   loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
@@ -154,6 +171,8 @@ const routes: Routes = [
   path:'tech-support-restaurant',
   loadChildren: () => import('./apps/restaurant/tech-support-restaurant/tech-support-restaurant.module').then(m => m.TechSupportRestaurantModule)
 },
+
+
 
 
 

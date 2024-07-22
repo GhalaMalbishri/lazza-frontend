@@ -21,8 +21,9 @@ import { RestaurantAdminHeaderComponent } from './layout/restaurant-admin-header
   ],
   imports: [
     CommonModule,
-    MainAppsRoutingModule
-  ]
+    MainAppsRoutingModule,
+  ],
+
 })
 export class MainAppsModule {
 

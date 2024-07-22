@@ -6,6 +6,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { InputTextComponent } from './input-text/input-text.component';
 import { RestaurantCardComponent } from './restaurant-card/restaurant-card.component';
 import { RouterModule } from '@angular/router';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 
 

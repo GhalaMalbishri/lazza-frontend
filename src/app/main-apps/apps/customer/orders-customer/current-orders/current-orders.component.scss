@@ -1,0 +1,65 @@
+.links{
+ margin-right: 70px;
+ margin-top: 20px;
+}
+.links a{
+ font-family: var(--fontFamily);
+ font-size: 25px;
+ color: black;
+ text-decoration: underline;
+}
+.links a:hover{
+color: var(--primary-color);
+}
+
+.pre{
+  position: relative;
+  right: 40px;
+}
+
+#cart table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+  margin-right: 120px;
+  margin-top: 50px;
+}
+
+#cart table img{
+    width: 40px;  /* image's size*/
+}
+
+#cart table td:nth-child(1) input{ /*quantity*/
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+#cart table td:nth-child(4){   /*image*/
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(3){  /*product's name*/
+  width: 250px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4)   /*price*/
+{
+  width: 150px;
+  text-align: center;
+}
+
+#cart table thead td{
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 18px 0;
+}
+#cart table tbody tr td{
+ padding-top: 15px;  /* تحط مسافه بين الهيدر و الصف الاول */
+}
+#cart table tbody td{
+ font-size: 13px;
+}

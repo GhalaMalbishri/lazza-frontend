@@ -11,25 +11,25 @@ import { UserTypeComponent } from './user-type/user-type.component';
 
 const routes: Routes = [
   {
-    path:'login',
+    path:'log-in',
     component:LoginComponent
   },
   {
-    path:'logout',
+    path:'log-out',
     component:LogoutComponent
   },
   {
-    path:'notfound',
+    path:'not-found',
     component:NotFoundComponent
   },
 
   {
-    path:'signupCustomer',
+    path:'signup-customer',
    component:SignupCustomerComponent
   },
 
   {
-    path:'signupRest',
+    path:'signup-Rest',
    component:SignupRestaurantComponent
   },
 
@@ -40,7 +40,7 @@ const routes: Routes = [
   },
 
   {
-    path:'writeOtp',
+    path:'write-otp',
    component:WriteOtpComponent
   },
   {

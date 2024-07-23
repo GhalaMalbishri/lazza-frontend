@@ -11,6 +11,8 @@ import { SignupRestaurantComponent } from './signup-restaurant/signup-restaurant
 import { SignupUserTypeComponent } from './signup-user-type/signup-user-type.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { WriteOtpComponent } from './write-otp/write-otp.component';
+import { UserTypeComponent } from './user-type/user-type.component';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 
 
 @NgModule({
@@ -23,11 +25,13 @@ import { WriteOtpComponent } from './write-otp/write-otp.component';
     SignupRestaurantComponent,
     SignupUserTypeComponent,
     ResetpasswordComponent,
-    WriteOtpComponent
+    WriteOtpComponent,
+    UserTypeComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class AuthModule { }

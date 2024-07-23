@@ -6,7 +6,7 @@ const routes: Routes = [
 
   {
     path:'',
-    redirectTo:'./auth/login',
+    redirectTo:'./auth/log-in',
     pathMatch:'full'
   },
 

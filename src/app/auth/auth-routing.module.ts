@@ -5,38 +5,34 @@ import { LogoutComponent } from './logout/logout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupCustomerComponent } from './signup-customer/signup-customer.component';
 import { SignupRestaurantComponent } from './signup-restaurant/signup-restaurant.component';
-import { SignupUserTypeComponent } from './signup-user-type/signup-user-type.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { WriteOtpComponent } from './write-otp/write-otp.component';
+import { UserTypeComponent } from './user-type/user-type.component';
 
 const routes: Routes = [
   {
-    path:'login',
+    path:'log-in',
     component:LoginComponent
   },
   {
-    path:'logout',
+    path:'log-out',
     component:LogoutComponent
   },
   {
-    path:'notfound',
+    path:'not-found',
     component:NotFoundComponent
   },
 
   {
-    path:'signupCustomer',
+    path:'signup-customer',
    component:SignupCustomerComponent
   },
 
   {
-    path:'signupRest',
+    path:'signup-Rest',
    component:SignupRestaurantComponent
   },
 
-  {
-    path:'signupType',
-   component:SignupUserTypeComponent
-  },
 
   {
     path:'reset-password',
@@ -44,8 +40,12 @@ const routes: Routes = [
   },
 
   {
-    path:'writeOtp',
+    path:'write-otp',
    component:WriteOtpComponent
+  },
+  {
+    path:'user-type',
+    component:UserTypeComponent
   }
 
 ];

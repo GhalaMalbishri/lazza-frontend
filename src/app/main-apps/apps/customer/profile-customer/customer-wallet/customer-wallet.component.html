@@ -2,7 +2,7 @@
   <p>يمكنك شحن رصيد لذّة والاستفادة منه في دفع طلباتك</p>
   </div>
 
-  <hr style="width: 90%;  margin-bottom: 5%;">
+  <hr style="width: 90%;  margin-bottom: 5%; margin-left: 4%;">
 
   <div class="wallet-Card">
     <p>53.02 SAR</p>
@@ -13,19 +13,29 @@
   <!-- payment section-->
   <section class="pay-container">
 
- <!-- card number-->
-  <div  class="payment">
-    <p>أدخل المبلغ المراد إضافته لرصيدك</p>
-   <img src="./../../../../../../../assets/email.png" alt="category 1">
-  </div>
-
-  <!-- amount-->
-  <div  class="payment">
-    <input  type="text" id="ccnum"
-   name="cardnumber" placeholder="السداد بالبطاقة الإئتمانية">
-  </div>
-
+    <a  data-toggle="modal" data-target="#modalAdd">  <app-button anyting="إضافة رصيد" class="rest"></app-button></a>
+    <a  routerLink="../signup-Rest">  <app-button anyting="تحويل للحساب" class="rest"></app-button></a>
 
 
 
   </section>
+    <!--modal 1 for add -->
+    <div class="modal" id="modalAdd">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">إضافة رصيد لذّة</h2>
+          </div> <!-- end of modal-header-->
+          <div class="modal-body">
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+              aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </p>
+          </div> <!-- end of modal-body-->
+
+        </div> <!-- end of modal-content-->
+
+      </div> <!-- end of modal-dialog-->
+
+    </div> <!-- end of modal 1-->
+
+    

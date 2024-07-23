@@ -1,17 +1,50 @@
-<!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
-<html dir="rtl" lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!----======== CSS ======== -->
 
-    <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-   <title>تسجيل دخول مطعم </title>
+<div class="form-container sign-in-container">
+  <form action="#">
+    <h1 class="sign-in-text">أكمل المعلومات التالية</h1>
+
+<div class="contain-10input" style="margin-bottom: 4%;">
+
+    <div class="input-contain">
+      <input type="text" placeholder="موقع المطعم   " required>
+      <input class="input" type="number" placeholder="رقم الهوية" />
+      <input type="number" placeholder="رقم الايبان" required>
+      <input type="number" placeholder="رقم الحساب" required>
+      <input type="file" placeholder="السجل التجاري   " required class="image">
+    </div>
+
+    <div class="input-contain">
+      <input  type="text" placeholder="اسم المطعم   " required />
+      <input type="email" placeholder="الايميل   " required />
+      <input type="number" placeholder="رقم الجوال" required />
+      <input type="password" placeholder="كلمة السر   " required />
+      <input type="file" placeholder="صورة المطعم" required class="image" />
+    </div>
+  </div>
+
+    <app-button anyting="تسجيل" type="btn-outline-danger"></app-button>
+  </form>
+</div>
+
+<div class="overlay-container">
+  <div class="overlay">
+    <div class="overlay-panel overlay-left">
+    </div>
+    <div class="overlay-panel overlay-right">
+
+      <img src="../../../assets/lazza-logo-white.png" alt="">
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ------------------------------------- -->
+<!---
+<title>تسجيل دخول مطعم </title>
 </head>
 <body>
     <div class="container">
@@ -42,15 +75,15 @@
 
                             <input type="password" placeholder="كلمة السر" required>
                         </div>
-
-                        <div class="input-field">
-                            <label>صورة المطعم</label> <!--change-->
+-->
+                      <!--   <div class="input-field">
+                            <label>صورة المطعم</label>
                             <input type="file" placeholder="صورة المطعم" required class="image">
                         </div>
 
                         <div class="input-field">
-                            <label>السجل التجاري</label>      <!--change-->
-                            <input type="file" placeholder="Enter your ccupation" required class="image">
+                            <label>السجل التجاري</label>
+                            <input type="file" placeholder="السجل التجاري" required class="image">
                         </div>
 
                         <div class="input-field">
@@ -59,7 +92,7 @@
                         </div>
 
                         <div class="input-field">
-                            <label>الشهادة الصحية</label>   <!--change-->
+                            <label>الشهادة الصحية</label>
                             <input type="file" placeholder="Enter your ccupation" required class="image">
                         </div>
 
@@ -73,10 +106,11 @@
                             <input type="number" placeholder="رقم الحساب" required>
                         </div>
 
-                        <button class="nextBtn">
-                            <span class="btnText">سجل</span>
-
-                        </button>
+                        <app-button anyting="سجل"></app-button>
                     </div>
                 </div>
             </div>
+
+-->
+
+

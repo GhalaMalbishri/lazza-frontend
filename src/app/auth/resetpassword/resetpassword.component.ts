@@ -1,4 +1,6 @@
+import { Routes } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resetpassword',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResetpasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  send(){
+    this.goToOtpPage();
+  }
+
+  goToOtpPage(){
+    this.router.navigate(['../write-otp']);
+  }
 
   ngOnInit(): void {
   }

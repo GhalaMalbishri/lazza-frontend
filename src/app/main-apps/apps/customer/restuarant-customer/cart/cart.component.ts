@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-cart',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
   arr: any
-  constructor() {
-    this.arr = [
+  constructor(private modalService: NgbModal) {
+    this.arr =
+    [
       {
         price: 15,
         meal: "Burger",
@@ -21,11 +23,15 @@ export class CartComponent implements OnInit {
         price: 15,
         meal: "Burger",
       },
-
+      
     ]
   }
 
   ngOnInit(): void {
+  }
+
+    openModal(modal) {
+    this.modalService.open(modal, { centered: true })
   }
 
 }

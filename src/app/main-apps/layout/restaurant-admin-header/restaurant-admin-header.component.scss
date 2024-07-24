@@ -1,6 +1,12 @@
-
-img{
-  height: 120px;
-  position: relative;
-  left: 1100px;
+.nav{
+ border-bottom: red 3px solid;
+}
+a{
+  color: black;
+}
+a:focus  {
+  color: var(--primary-color);;
+}
+a:hover{
+  color: var(--primary-color);
 }

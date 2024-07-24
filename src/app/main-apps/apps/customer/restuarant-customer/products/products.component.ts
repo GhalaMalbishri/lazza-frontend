@@ -6,8 +6,46 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  arr:any;
 
-  constructor() { }
+  constructor() {
+    this.arr = [
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+      {
+        name: 'burger',
+        price: 100,
+      },
+
+
+    ]
+  }
 
   ngOnInit(): void {
   }

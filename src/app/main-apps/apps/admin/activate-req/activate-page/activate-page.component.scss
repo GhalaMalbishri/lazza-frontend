@@ -1,0 +1,31 @@
+.main{
+  margin: 5%;
+   font-family: var(--fontFamily);
+ }
+
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   font-size: 18px;
+   text-align: center;
+
+
+ }
+
+ th, td {
+   padding: 12px;
+   border: 1px solid var(--table-border);
+
+
+ }
+
+ th {
+   background-color: var(--table-row-bg);
+   font-weight: bold;
+ }
+
+ td {
+   text-align: center;
+   font-weight: 500;
+ }
+

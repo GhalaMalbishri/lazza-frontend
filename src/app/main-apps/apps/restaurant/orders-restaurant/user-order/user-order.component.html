@@ -3,7 +3,7 @@
   <table >
     <tr>
 
-      <th>الحاله</th>
+      <th>الحـالـــة</th>
       <th> تفاصيل الطلب</th>
       <th>رقم العميل</th>
       <th>رقم الطلب</th>
@@ -11,16 +11,17 @@
 
 
 
-
     </tr>
 
     <tr *ngFor="let i of arr">
-      <td>{{i.name}}</td>
-      <td>{{i.ornum}}</td>
-      <td>{{i.custnum}}</td>
-      <td><button class="details">التفاصيل</button></td>
-      <td><button class="status refuse">رفض</button>
-        <button class="status accept">قبول</button></td>
+
+
+      <td style="display: flex; justify-content: space-evenly;"><a  routerLink="../popUp">  <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button></a>
+        <a  routerLink="../popUp">  <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button></a></td>
+        <td> <a  routerLink="../popUp">  <app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest"></app-table-button></a></td>
+        <td>{{i.custnum}}</td>
+        <td>{{i.ornum}}</td>
+        <td>{{i.name}}</td>
     </tr>
   </table>
 
@@ -28,60 +29,3 @@
 
 
 
-<!-- <h1 class="orders-text">الطلبات المرسله</h1> -->
-
-<!-- <div class="container">
-  <div class="content">
-    <div class="center">
-      <table>
-        <tr>
-          <th>الحاله</th>
-          <th>التفاصيل</th>
-          <th>رقم العميل</th>
-          <th>رقم الطلب</th>
-          <th>اسم العميل</th>
-        </tr>
-        <tr>
-          <td>
-            <button class="status refuse">رفض</button>
-            <button class="status accept">قبول</button>
-          </td>
-          <td><button class="details">التفاصيل</button></td>
-          <td>0594128758</td>
-          <td>10</td>
-          <td>غسان</td>
-        </tr>
-        <tr>
-          <td>
-            <button class="status refuse">رفض</button>
-            <button class="status accept">قبول</button>
-          </td>
-          <td><button class="details">التفاصيل</button></td>
-          <td>0594128758</td>
-          <td>10</td>
-          <td>غسان</td>
-        </tr>
-        <tr>
-          <td>
-            <button class="status refuse">رفض</button>
-            <button class="status accept">قبول</button>
-          </td>
-          <td><button class="details">التفاصيل</button></td>
-          <td>0594128758</td>
-          <td>10</td>
-          <td>غسان</td>
-        </tr>
-        <tr>
-          <td>
-            <button class="status refuse">رفض</button>
-            <button class="status accept">قبول</button>
-          </td>
-          <td><button class="details">التفاصيل</button></td>
-          <td>0594128758</td>
-          <td>10</td>
-          <td>غسان</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div> -->

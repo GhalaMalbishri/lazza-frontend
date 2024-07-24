@@ -15,7 +15,11 @@
   --evaluateStar-color: #ebc351;
 
   --fontFamily: "Tajawal";
+
+  --table-border: #ddd;
+  --table-row-bg: #f2f2f2;
 }
+
 
 html, body
  {
@@ -23,7 +27,7 @@ html, body
   height: 100%;
   font-family: var(--fontFamily);
   background-color: var(--Background);
-  
+
 }
 
 h6{
@@ -33,6 +37,9 @@ h6{
 h2, h3, h4{
   color: var(--primary-color);
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

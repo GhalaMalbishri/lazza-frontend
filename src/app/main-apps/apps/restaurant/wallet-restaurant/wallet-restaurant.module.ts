@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { WalletRestaurantRoutingModule } from './wallet-restaurant-routing.module';
 import { WalletComponent } from './wallet/wallet.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { WalletComponent } from './wallet/wallet.component';
   ],
   imports: [
     CommonModule,
-    WalletRestaurantRoutingModule
+    WalletRestaurantRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class WalletRestaurantModule { }

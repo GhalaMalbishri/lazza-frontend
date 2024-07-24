@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdminDashboaredRoutingModule } from './admin-dashboared-routing.module';
 import { AdminDashboaredComponent } from './admin-dashboared/admin-dashboared.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AdminDashboaredComponent } from './admin-dashboared/admin-dashboared.co
   ],
   imports: [
     CommonModule,
-    AdminDashboaredRoutingModule
+    AdminDashboaredRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class AdminDashboaredModule { }

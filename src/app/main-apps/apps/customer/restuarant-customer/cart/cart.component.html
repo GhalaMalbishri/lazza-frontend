@@ -81,13 +81,37 @@
 
         <div class="col-sm-6">
           <div class="text-sm-end mt-2 mt-sm-0">
-            <a href="ecommerce-checkout.html" class="btn btn-danger">
+            <a (click)="openModal(content)" class="btn btn-danger">
               <i class="mdi mdi-cart-outline me-1"></i> اكمل الطلب </a>
           </div>
         </div> <!-- end col -->
 
       </div> <!-- end row-->
+
     </div>
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">معلومات الدفع</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="card-detils">
+          <input class="name-of-holder" type="text" placeholder="اسم حامل البطاقة"><br>
+          <input class="card-number" type="number" placeholder="رقم البطاقة">
+        </div>
+
+        <div class="card-numbers">
+          <input type="date" placeholder="تاريخ الانتهاء">
+          <input type="number" placeholder="رقم CVV">
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
+      </div>
+    </ng-template>
 
 
     <div class="col-xl-4">

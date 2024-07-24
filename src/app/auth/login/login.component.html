@@ -1,19 +1,17 @@
 
-<div class="form-container sign-in-container">
-  <form action="#">
+<div class="form form-container sign-in-container">
     <h1 class="sign-in-text">تسجيل الدخول</h1>
 
 
-    <input class="input" placeholder="الايميل" type="email"/>
+    <input [(ngModel)]="login_form.email" class="input" placeholder="الايميل" type="email"/>
 
 
-    <input placeholder="كلمة السر" class="input" type="password"/>
+    <input [(ngModel)]="login_form.password" placeholder="كلمة السر" class="input" type="password"/>
 
     <a routerLink="../reset-password">هل نسيت كلمة السر ؟</a>
-    <button>دخول</button>
-    
+    <button (click)="login()">دخول</button>
+
     <h6>ليس لديك حساب ؟ <a style="color: var(--primary-color);" routerLink="../user-type">انضم إلينا</a></h6>
-  </form>
 </div>
 
 <div class="overlay-container">

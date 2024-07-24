@@ -20,11 +20,12 @@ header {
   overflow: hidden;
   border-bottom: var(--primary-color) solid;;
   padding: 10px 20px;
+  max-height: 100;
 }
 
 
 .header img {
-  width: 50px;
+  width: 100%;
 }
 
 
@@ -54,7 +55,7 @@ input[type=”text” i]{
 
 .search{
   position: relative;
-  left: 120px;
+  left: 180px;
   border-radius: 15px;
   width: 200px;
   border-color: gray
@@ -66,7 +67,8 @@ input[type=”text” i]{
 }
 
 .header a.logo {
-  width: 20px;
+  width: 100px;
+
   font-weight: bold;
   padding: 0 !important;
 }
@@ -88,10 +90,5 @@ input[type=”text” i]{
     float: none;
     display: block;
     text-align: left;
-  }
-
-
-  .header-right {
-    float: none;
   }
 }

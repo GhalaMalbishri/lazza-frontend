@@ -1,1 +1,33 @@
-<p>view-users-details works!</p>
+<div class="main">
+
+  <h2 style="color: var(--primary-color); display: flex; justify-content: flex-end; margin-bottom: 4rem;"> جميع طلبات العميل</h2>
+
+
+  <table >
+    <tr>
+
+      <th>تفاصيل الطلب</th>
+      <th> اسم المندوب</th>
+      <th>طريقة الدفع</th>
+      <th>تاريخ الطلب</th>
+      <th>معرّف الطلب</th>
+
+
+
+    </tr>
+
+    <tr *ngFor="let i of arr">
+
+
+        <td> <a  routerLink="../popUp">  <app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest"></app-table-button></a></td>
+        <td>{{i.deliveryMan_name}}</td>
+        <td>{{i.PaymentMethod}}</td>
+        <td>{{i.orderDate}}</td>
+        <td>{{i.orderID}}</td>
+    </tr>
+  </table>
+
+</div>
+
+
+

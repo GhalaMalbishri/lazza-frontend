@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ActivateReqRoutingModule } from './activate-req-routing.module';
 import { ActivatePageComponent } from './activate-page/activate-page.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ActivatePageComponent } from './activate-page/activate-page.component';
   ],
   imports: [
     CommonModule,
-    ActivateReqRoutingModule
+    ActivateReqRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class ActivateReqModule { }

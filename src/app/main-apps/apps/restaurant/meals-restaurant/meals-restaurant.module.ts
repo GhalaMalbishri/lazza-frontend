@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MealsRestaurantRoutingModule } from './meals-restaurant-routing.module';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewApdateProductComponent } from './view-apdate-product/view-apdate-product.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ViewApdateProductComponent } from './view-apdate-product/view-apdate-pr
   ],
   imports: [
     CommonModule,
-    MealsRestaurantRoutingModule
+    MealsRestaurantRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class MealsRestaurantModule { }

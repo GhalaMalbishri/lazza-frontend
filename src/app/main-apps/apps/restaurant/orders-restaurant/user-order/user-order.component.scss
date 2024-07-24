@@ -1,8 +1,5 @@
 .main{
-  margin-right: 250px;
-  margin-left: 5%;
-  margin-top:5% ;
-  margin-bottom:5% ;
+ margin: 5%;
   font-family: var(--fontFamily);
 }
 // .container {
@@ -23,7 +20,7 @@
 // }
 
 table {
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
   font-size: 18px;
   text-align: center;
@@ -33,42 +30,17 @@ table {
 
 th, td {
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--table-border);
+
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: var(--table-row-bg);
   font-weight: bold;
 }
 
 td {
   text-align: center;
+  font-weight: 500;
 }
 
-// button.status, button.details {
-//   padding: 10px 20px;
-//   font-size: 16px;
-//   margin: 5px;
-//   cursor: pointer;
-//   border: none;
-//   border-radius: 5px;
-// }
-
-// button.accept {
-//   background-color: #4CAF50;
-//   color: white;
-// }
-
-// button.refuse {
-//   background-color: #f44336;
-//   color: white;
-// }
-
-// button.details {
-//   background-color: #2196F3;
-//   color: white;
-// }
-
-// button.status:hover, button.details:hover {
-//   opacity: 0.8;
-// }

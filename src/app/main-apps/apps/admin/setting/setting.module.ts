@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SettingRoutingModule } from './setting-routing.module';
 import { TermsConditionComponent } from './terms-condition/terms-condition.component';
 import { AdminWalletComponent } from './admin-wallet/admin-wallet.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AdminWalletComponent } from './admin-wallet/admin-wallet.component';
   ],
   imports: [
     CommonModule,
-    SettingRoutingModule
+    SettingRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class SettingModule { }

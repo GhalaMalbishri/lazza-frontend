@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserManageRoutingModule } from './user-manage-routing.module';
 import { ViewUsersComponent } from './view-users/view-users.component';
 import { ViewUsersDetailsComponent } from './view-users-details/view-users-details.component';
+import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ViewUsersDetailsComponent } from './view-users-details/view-users-detai
   ],
   imports: [
     CommonModule,
-    UserManageRoutingModule
+    UserManageRoutingModule,
+    SharedComponentsModule
   ]
 })
 export class UserManageModule { }

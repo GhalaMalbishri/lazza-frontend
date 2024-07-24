@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-current-orders',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-orders.component.scss']
 })
 export class CurrentOrdersComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
 
-  ngOnInit(): void {
+
+ngOnInit(): void {
+
   }
-
 }
+
+

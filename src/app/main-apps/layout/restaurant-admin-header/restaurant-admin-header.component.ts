@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './restaurant-admin-header.component.html',
   styleUrls: ['./restaurant-admin-header.component.scss']
 })
-export class RestaurantAdminHeaderComponent implements OnInit {
-
+export class RestaurantAdminHeaderComponent implements OnInit
+ {
+   
   constructor() { }
 
   ngOnInit(): void {

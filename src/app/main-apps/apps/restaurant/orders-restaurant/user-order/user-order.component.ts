@@ -12,20 +12,20 @@ export class UserOrderComponent implements OnInit {
     this.arr = [
       {
         name: 'name1',
-        ornum: 10,
-        custnum: 321456,
+        email: 'some1@gmail.com',
+        custnum: 321459996,
       },
 
       {
         name: 'name2',
-        ornum: 10,
-        custnum: 321456,
+        email: 'some2@gmail.com',
+        custnum: 321335456,
       },
 
       {
         name: 'name3',
-        ornum: 10,
-        custnum: 321456,
+        email: 'some3@gmail.com',
+        custnum: 321246456,
       },
 
     ]

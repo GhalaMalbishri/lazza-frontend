@@ -1,13 +1,15 @@
-
-/* remove card style when component works, from here */
-.Card-container{
-  background-color: var(--light-grey-color);
-
-  border-radius: 20px;
+h3{
+  direction: rtl;
+  font-family: var(--fontFamily);
+  margin-right: 70px;
+}
+.content{
   display: flex;
-  width: 20%;
-  height: 40%;
   justify-content: center;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-items: center;
   text-align: center;
   padding: 10px;

@@ -91,7 +91,7 @@ const routes: Routes = [
 
 //---------------- customer ----------------------
 
-//correct, path: apps/customer-home/customerhome-list
+//correct, path: apps/customer-home/Customerhome-list
 {
   path:'customer-home',
   loadChildren: () => import('./apps/customer/home-customer/home-customer.module').then(m => m.HomeCustomerModule)

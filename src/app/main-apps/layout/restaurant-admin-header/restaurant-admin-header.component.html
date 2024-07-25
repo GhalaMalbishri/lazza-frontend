@@ -1,23 +1,100 @@
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" routerLink="/apps/restaurant-home/restaurantHome-list">الصفحة الرئيسية</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="/apps/restaurant-user-order/orders-restaurant-list" >الطلبات</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" [routerLink]="['/routePath']" routerLinkActive="router-link-active"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      الوجبات
-    </a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">عرض المنتجات</a></li>
-      <li><a class="dropdown-item" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >اضافة منتج</a></li>
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a  [routerLink]="['/routePath']" routerLinkActive="router-link-active"  class="nav-link">الاعلانات</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >الدعم الفني</a>
-  </li>
-</ul>
+ <!-- admin -->
+ <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../../../../assets/LazzaLogo-01.png" alt="" width="100"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/apps/admin-dashboared/adminDashboared-list">الصفحة الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/apps/admin-view-users/adminViewUsers-list">ادارة المستخدمين</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            الطلبات
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/apps/admin-activate/adminActivate-list">طلبات التفعيل</a></li>
+            <li><a class="dropdown-item" routerLink="/apps/admin-ads/adminAds-list">طلبات الاعلانات</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" routerLink="">الدعم الفني</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <a class="navbar-brand" href="#">
+          <div class="dropdown">
+            <div class="btn-group dropstart">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../../../../assets/avatar-icon.png" alt="" width="30" height="24">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/apps/admin-wallet/adminWallet-list">المحفظه</a></li>
+                <li><a class="dropdown-item" href="#">الاعدادت</a></li>
+                <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+              </ul>
+            </div>
+          </div>
+        </a>
+
+      </form>
+    </div>
+  </div>
+</nav> -->
+
+<!-- restaurant -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../../../../assets/LazzaLogo-01.png" alt="" width="100"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/apps/restaurant-home/restaurantHome-list">الصفحة الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/apps/restaurant-user-order/orders-restaurant-list">الطلبات</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            الوجبات
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="">عرض الوجبات</a></li>
+            <li><a class="dropdown-item" routerLink="">اضافة وجبة</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" routerLink="/apps/restaurant-ads/restaurantAds-list">الاعلانات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-disabled="true" routerLink="">الدعم الفني</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <a class="navbar-brand" href="#">
+          <div class="dropdown">
+            <div class="btn-group dropstart">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../../../../assets/avatar-icon.png" alt="" width="30" height="24">
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+              </ul>
+            </div>
+          </div>
+        </a>
+
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-cust-main-page',
@@ -10,7 +11,7 @@ export class CustMainPageComponent implements OnInit, OnDestroy {
   private intervalId: any;
 
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
     this.initAdsSlider();
@@ -35,6 +36,9 @@ export class CustMainPageComponent implements OnInit, OnDestroy {
 
   clearAdsSlider() {
     clearInterval(this.intervalId);
+  }
+  openModal(modal) {
+    this.modalService.open(modal, { centered: true })
   }
 }
 

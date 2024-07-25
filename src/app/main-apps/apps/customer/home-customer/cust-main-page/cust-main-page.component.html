@@ -18,13 +18,27 @@
     <h2 >أكثر من 100+ مطعم</h2>
     <p>في مناطق مختلفة في السعودية</p>
     <p>تصفح المطاعم القريبة منك من خلال الخريطة</p>
-
+    <app-button  anyting="حدد موقعك" type="btn-outline-danger" (click)="openModal(content)" class="rest"></app-button>
   </section>
 
 
 </div>
 
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title"></h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19734.13800669317!2d39.871916132003825!3d21.420420299464716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204633c80e23f%3A0x8925f03717869757!2z2KfZhNio2YrZgw!5e0!3m2!1sar!2ssa!4v1721914104356!5m2!1sar!2ssa" width="470" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
+  </div>
+</ng-template>
 <!-- banner for ADs-->
 
 <div class="ads-container">
@@ -91,8 +105,8 @@
       <p class="text-center">مطعم ###</p>
     </div>
   </div>
-  
+
 
 </div>
 
- -->
+

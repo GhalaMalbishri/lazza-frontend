@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantAdminHeaderComponent implements OnInit
  {
-   
+
   constructor() { }
 
   ngOnInit(): void {

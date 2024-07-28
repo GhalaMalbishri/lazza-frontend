@@ -1,0 +1,19 @@
+.horizontal-scroll{
+  overflow-x: scroll;
+}
+.horizontal-scroll::-webkit-scrollbar{
+ display: none;
+}
+
+.products{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.rest:visited{
+    color: red;
+}

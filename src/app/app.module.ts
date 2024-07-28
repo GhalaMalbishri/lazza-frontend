@@ -10,6 +10,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
+import { ErrorInterceptoService } from './services/error-intercepto.service';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,18 @@ import { TokenInterceptorInterceptor } from './services/token-interceptor.interc
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorInterceptor, // اي ريكويست لازم يعدي من هنا 
+      useClass: TokenInterceptorInterceptor, // اي ريكويست لازم يعدي من هنا
+      multi: true,
+    },
+
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptoService, // اي ريكويست لازم يعدي من هنا
       multi: true,
     },
   ],

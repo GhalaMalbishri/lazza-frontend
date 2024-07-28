@@ -91,7 +91,7 @@ const routes: Routes = [
 
 //---------------- customer ----------------------
 
-//correct, path: apps/customer-home/Customerhome-list
+//correct, path: /apps/customer-home/Customerhome-list
 {
   path:'customer-home',
   loadChildren: () => import('./apps/customer/home-customer/home-customer.module').then(m => m.HomeCustomerModule)
@@ -180,6 +180,10 @@ const routes: Routes = [
 {
   path:'tech-support-restaurant',
   loadChildren: () => import('./apps/restaurant/tech-support-restaurant/tech-support-restaurant.module').then(m => m.TechSupportRestaurantModule)
+},
+{
+  path:'restaurant-profile',
+  loadChildren: () => import('./apps/restaurant/restaurant-profile/restaurant-profile.module').then(m => m.RestaurantProfileModule)
 },
 
 

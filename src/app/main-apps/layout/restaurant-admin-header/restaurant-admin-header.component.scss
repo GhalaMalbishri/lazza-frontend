@@ -37,7 +37,10 @@ header{
     font-family: var(--fontFamily);
 
 }
-.navv a:hover {
+.nav-link:hover {
+    color: var(--primary-color);
+}
+.dropdown-item:hover {
     color: var(--primary-color);
 }
 

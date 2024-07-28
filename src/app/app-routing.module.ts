@@ -6,7 +6,7 @@ const routes: Routes = [
 
   {
     path:'',
-    redirectTo:'./auth/log-in',
+    redirectTo:'/apps/customer-home/Customerhome-list',
     pathMatch:'full'
   },
 

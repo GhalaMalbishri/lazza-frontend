@@ -8,19 +8,18 @@ import { Observable } from 'rxjs';
 })
 export class ImpApiService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-    get(api): Observable<any>
-    {
+  get(api): Observable<any> {
     return this.http.get<any>(api);
-    }
-  post(api, data): Observable<any>
-  {
-  return this.http.post<any>(api, data);
-}
-put(api, data): Observable<any> {
-  return this.http.put<any>(api, data);
-}
-delete(api) {
-  return this.http.delete<any>(api);}
+  }
+  post(api, data): Observable<any> {
+    return this.http.post<any>(api, data);
+  }
+  put(api, data): Observable<any> {
+    return this.http.put<any>(api, data);
+  }
+  delete(api) {
+    return this.http.delete<any>(api);
+  }
 }

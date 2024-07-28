@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-user-order',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserOrderComponent implements OnInit {
   arr:any
 
-  constructor() {
+  constructor(private modalService: NgbModal) {
     this.arr = [
       {
         name: 'name1',
@@ -34,5 +35,7 @@ export class UserOrderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  openModal(modal) {
+    this.modalService.open(modal, { centered: true })
+  }
 }

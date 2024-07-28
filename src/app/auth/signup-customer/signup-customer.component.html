@@ -1,16 +1,15 @@
 
 <div class="form-container sign-in-container">
-  <form action="#">
-    <h1 class="sign-in-text" >أدخل معلوماتك</h1>
 
-    <input class="input" type="text" placeholder="الاسم    " />
-    <input class="input" type="number" placeholder="رقم الهوية" />
-    <input class="input" type="email" placeholder="الايميل   " />
-    <input class="input" type="password" placeholder="كلمة السر   " />
-    <input style="margin-bottom: 4%;" class="input" type="number" placeholder="رقم الجوال" />
+    <h1 class="sign-in-text">أدخل معلوماتك</h1>
 
-    <app-button anyting="تسجيل" type="btn-outline-danger"></app-button>
-  </form>
+    <input [(ngModel)]="signUp_Customer_form.name"class="input" type="text" placeholder="الاسم    " />
+    <input [(ngModel)]="signUp_Customer_form.national_id" class="input" type="number" placeholder="رقم الهوية" />
+    <input [(ngModel)]="signUp_Customer_form.email" class="input" type="email" placeholder="الايميل   " />
+    <input [(ngModel)]="signUp_Customer_form.password" class="input" type="password" placeholder="كلمة السر   " />
+    <input [(ngModel)]="signUp_Customer_form.phone" style="margin-bottom: 4%;" class="input" type="number" placeholder="رقم الجوال" />
+
+    <button (click)="signUp()">sent</button>
 </div>
 
 <div class="overlay-container">

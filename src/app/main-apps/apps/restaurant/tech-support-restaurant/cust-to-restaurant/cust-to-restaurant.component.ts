@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-cust-to-restaurant',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustToRestaurantComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
-
+  openModal(modal) {
+    this.modalService.open(modal, { centered: true })
+  }
 }

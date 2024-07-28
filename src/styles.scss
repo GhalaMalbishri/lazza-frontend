@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 :root {
 
@@ -31,11 +31,16 @@ html, body
 }
 
 h6{
+
   color: #c3c3c3;
+  font-family: var(--fontFamily);
 }
 
 h2, h3, h4{
   color: var(--primary-color);
+  align-self: self-end;
+  padding-left: 70%;
+  font-family: var(--fontFamily);
 }
 
 /* Importing Bootstrap SCSS file. */

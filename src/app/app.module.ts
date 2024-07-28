@@ -10,12 +10,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
+import { SignupCustomerComponent } from './auth/signup-customer/signup-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomePageComponent
+    HomePageComponent,
+    SignupCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { TokenInterceptorInterceptor } from './services/token-interceptor.interc
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorInterceptor, // اي ريكويست لازم يعدي من هنا 
+      useClass: TokenInterceptorInterceptor, // اي ريكويست لازم يعدي من هنا
       multi: true,
     },
   ],

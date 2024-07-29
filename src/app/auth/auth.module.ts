@@ -17,7 +17,7 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
 
 @NgModule({
   declarations: [
-    //LoginComponent,
+    LoginComponent,
     LogoutComponent,
     NotFoundComponent,
     // SignUpComponent,
@@ -31,6 +31,7 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
     CommonModule,
     AuthRoutingModule,
     SharedComponentsModule,
+    FormsModule,
     ReactiveFormsModule
   ]
 })

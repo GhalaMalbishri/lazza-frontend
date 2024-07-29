@@ -39,11 +39,16 @@ h6{
   font-family: var(--fontFamily);
 }
 
-h2, h3, h4{
+ h2 , h3, h4{
   color: var(--primary-color);
   align-self: self-end;
-  padding-left: 60%;
+  
   font-family: var(--fontFamily);
+}
+
+.main-text{
+  margin-right: 100px;
+  color : var(--primary-color)
 }
 
 /* Importing Bootstrap SCSS file. */

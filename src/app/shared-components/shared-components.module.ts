@@ -8,6 +8,7 @@ import { RestaurantCardComponent } from './restaurant-card/restaurant-card.compo
 import { RouterModule } from '@angular/router';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { TableButtonComponent } from './table-button/table-button.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
@@ -20,6 +21,7 @@ import { TableButtonComponent } from './table-button/table-button.component';
     InputTextComponent,
     RestaurantCardComponent,
     TableButtonComponent,
+    LoaderComponent,
 
 
   ],
@@ -34,7 +36,8 @@ import { TableButtonComponent } from './table-button/table-button.component';
     InputTextComponent,
     RestaurantCardComponent,
     TableButtonComponent,
-    
+    LoaderComponent
+
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

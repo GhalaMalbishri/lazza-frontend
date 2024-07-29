@@ -13,6 +13,8 @@ import { TokenInterceptorInterceptor } from './services/token-interceptor.interc
 import { SignupCustomerComponent } from './auth/signup-customer/signup-customer.component';
 import { ErrorInterceptoService } from './services/error-intercepto.service';
 import { SharedComponentsModule } from './shared-components/shared-components.module';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
     LoginComponent,
     HomePageComponent,
     SignupCustomerComponent
+
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,9 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
     FormsModule,
     NgbModule,
     SharedComponentsModule,
-    ReactiveFormsModule
+
+    NgxSpinnerModule
+
   ],
   providers: [
     {

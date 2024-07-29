@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { TableButtonComponent } from './table-button/table-button.component';
 import { LoaderComponent } from './loader/loader.component';
+import { PaginationComponent } from './pagination/pagination.component';
+
 
 
 
@@ -22,7 +24,7 @@ import { LoaderComponent } from './loader/loader.component';
     RestaurantCardComponent,
     TableButtonComponent,
     LoaderComponent,
-
+    PaginationComponent,
 
   ],
   imports: [
@@ -37,7 +39,7 @@ import { LoaderComponent } from './loader/loader.component';
     RestaurantCardComponent,
     TableButtonComponent,
     LoaderComponent
-
+    PaginationComponent,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

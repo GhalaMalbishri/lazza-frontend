@@ -1,13 +1,16 @@
 
-
+@import "~ngx-spinner/animations/ball-spin-clockwise.css";
 :root {
 
   --primary-color: #DC4727;
 
-  --Background: #fdfdfd;
+  --Background: #f4f4f4;
+  --white:#FFFFFFff;
 
 
   --light-grey-color:#F5F5F5;
+
+
 
   --card-img-color: #d9d9d9;
 
@@ -39,7 +42,7 @@ h6{
 h2, h3, h4{
   color: var(--primary-color);
   align-self: self-end;
-  padding-left: 70%;
+  padding-left: 60%;
   font-family: var(--fontFamily);
 }
 

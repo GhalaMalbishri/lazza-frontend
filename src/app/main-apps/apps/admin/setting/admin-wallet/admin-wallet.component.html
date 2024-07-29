@@ -1,1 +1,97 @@
-<p>admin-wallet works!</p>
+<div id="main-wrapper">
+
+  <div class="content-body ">
+    <div class="container-fluid">
+
+      <!--first row-->
+      <div class="row " >
+
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap" style="background-image:linear-gradient(to right,#DC4727 , #d47f6c);">
+
+            <div class="head">
+              <div>
+                <i class="fa-solid fa-credit-card fa-2xl"></i>
+              </div>
+              <div>رصيدك مع لذّة</div>
+            </div>
+
+            <span class="hind-font caption-12 c-dashboardInfo__count">SAR10,500</span>
+
+          </div>
+        </div>
+
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap" style="background-color:var(--white)">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title ">عدد المستخدمين </h4><span
+              class="hind-font caption-12 c-dashboardInfo__count">24K</span>
+          </div>
+        </div>
+
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap" style="background-color:var(--white)">
+            <h4 class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title">عدد المطاعم </h4><span
+              class="hind-font caption-12 c-dashboardInfo__count">1.5K</span>
+          </div>
+        </div>
+
+        <div class="c-dashboardInfo col-lg-3 col-md-6">
+          <div class="wrap" style="background-color:var(--white); ">
+
+       <a   class="hind-font caption-12 c-dashboardInfo__count" routerLink="../signup-Rest">  <app-button anyting="تعديل الشروط " type="btn-outline-danger" class="rest"></app-button></a>
+
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <!--second row-->
+      <div class="row">
+
+        <div class="col-lg-12" style="margin-top: 1rem;">
+          <h2 style="color: var(--primary-color); display: flex; justify-content: flex-end; margin-bottom: 1rem;">عمليات
+            التحويل </h2>
+
+          <table class="table">
+
+            <thead>
+              <tr>
+                <th scope="col">الحالة</th>
+                <th scope="col">النوع</th>
+                <th scope="col">التاريخ</th>
+                <th scope="col">المبلغ</th>
+                <th scope="col">الإسم</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let i of arr">
+                <td  [style.color]="i.status == 'مقبول' ? 'green' : 'var(--primary-color)'">{{i.status}}</td>
+                <td>{{i.transferType}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.amount}}</td>
+                <td>{{i.name}}</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+
+          <!-- <app-pagination> </app-pagination> -->
+
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

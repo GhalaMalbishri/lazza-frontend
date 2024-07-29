@@ -2,33 +2,32 @@
 
   <h2 style="color: var(--primary-color); display: flex; justify-content: flex-end; margin-bottom: 4rem;">طلبات الاعلانات</h2>
 
+  <table class="table">
 
-  <table >
-    <tr>
+    <thead>
+      <tr>
+        <th scope="col">الحـالـــة</th>
+        <th scope="col">تفاصيل الطلب</th>
+        <th scope="col">رقم الجوال</th>
+        <th scope="col">الإيميل</th>
+        <th scope="col">اسم المطعم</th>
+      </tr>
+    </thead>
 
-      <th>الحـالـــة</th>
-      <th> تفاصيل الطلب</th>
-      <th>رقم الجوال</th>
-      <th>الإيميل</th>
-      <th>اسم المطعم</th>
+    <tbody>
+      <tr *ngFor="let i of arr">
+
+        <td style="display: flex; justify-content: space-evenly;"><a  routerLink="../popUp">  <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button></a>
+          <a  routerLink="../popUp">  <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button></a></td>        <td> <a  routerLink="../popUp">  <app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest"></app-table-button></a></td>
+              <td>{{i.restNum}}</td>
+              <td>{{i.email}}</td>
+              <td>{{i.name}}</td>
+      </tr>
 
 
-
-    </tr>
-
-    <tr *ngFor="let i of arr">
-
-
-      <td style="display: flex; justify-content: space-evenly;"><a  routerLink="../popUp">  <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button></a>
-        <a  routerLink="../popUp">  <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button></a></td>
-        <td> <a  routerLink="../popUp">  <app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest"></app-table-button></a></td>
-        <td>{{i.restNum}}</td>
-        <td>{{i.email}}</td>
-        <td>{{i.name}}</td>
-    </tr>
+    </tbody>
   </table>
 
 </div>
-
 
 

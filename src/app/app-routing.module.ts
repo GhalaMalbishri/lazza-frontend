@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainLayoutComponent } from './main-apps/layout/main-layout/main-layout.component';
+import { CheckTokenGuard } from './guard/check-token.guard';
+// import { AuthCheckGuard } from './guard/auth-check.guard';
 
 const routes: Routes = [
 
   {
     path:'',
-    redirectTo:'/apps/customer-home/Customerhome-list',
+    redirectTo:'/auth/log-in',
     pathMatch:'full'
   },
 
   {
-    path:'auth',
+    path:'auth', canActivate:[CheckTokenGuard], // تحط القارد في المكان الي تبيه
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
 //

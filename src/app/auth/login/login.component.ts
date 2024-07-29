@@ -1,7 +1,9 @@
+import { log } from 'console';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ImpApiService } from 'src/app/services/imp-api.service';
 import { auth } from 'src/constent/Route';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,32 +11,72 @@ import { auth } from 'src/constent/Route';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-    login_form = {
-    email: null,   // key must be like postman
-    password: null,
-  };
-  constructor(private impApiService:ImpApiService,private Route :Router) { }
+  loading = false
+  submited = false
 
-ngOnInit(): void {
-  let user = JSON.parse(localStorage.getItem('user')) // to get user's info
-  console.log(user.user.name);
+  loginForm = this.fb.group({
+    email: ['', Validators.email],
+    password: ['', Validators.required]
+  })
+  constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder) { }
+
+  ngOnInit(): void {
 
   }
 
-login()
-{
-  console.log(this.login_form);
-                        //    api     +     data
-    this.impApiService.post(auth.login,this.login_form).subscribe(data=>{ // if you want to see data use subscribe
-    localStorage.setItem('user',data.user)
-    localStorage.setItem('token',data.access_token) // للترتيب
-    this.Route.navigate(['apps/customer-home/Customerhome-list'])
-    console.log(data);
-   })
+  login() {
 
+    this.impApiService.post(auth.login,this.loginForm.value).subscribe(data => {
+      localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage
+      localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
+
+    })
+
+  }
 }
 
-goToPage(){
 
-}
-}
+// export class LoginComponent implements OnInit {
+//   loading = false
+//   submited = false
+
+//   loginForm = this.fb.group({
+//     email:['' , Validators.email] ,
+//     password:['',[Validators.required]]
+//   })
+//   constructor(private impApiService: ImpApiService, private Route: Router , private fb : FormBuilder) { }
+
+//   ngOnInit(): void {
+//     let user = JSON.parse(localStorage.getItem('user')) // to get user's info
+//     console.log(user);
+//   }
+
+//   login() {
+//     this.loading = true
+//     this.submited = true
+//                            //    api     +     data
+//       this.impApiService.post(auth.login, this.loginForm).subscribe(data => { // if you want to see data use subscribe
+//       localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage
+//       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
+
+
+
+//       if (data.data.user_type_id == 2) {
+//         this.Route.navigate(['/apps/restaurant-home/restaurantHome-list'])
+//       }
+//       if (data.data.user_type_id == 1) {
+//         this.Route.navigate(['/apps/admin-home-main/adminHomeMain-list'])
+//       }
+//       if (data.data.user_type_id == 3) {
+//         this.Route.navigate(['/apps/customer-home/Customerhome-list'])
+//       }
+
+//       // this.Route.navigate(['apps/customer-home/Customerhome-list'])
+//       // console.log(data);
+//       this.loading = false
+//     } , err =>{
+//       this.loading = false
+//     })
+
+//   }
+// }

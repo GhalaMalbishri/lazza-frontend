@@ -30,8 +30,8 @@ export class SignupCustomerComponent implements OnInit {
   console.log(this.signUp_Customer_form);
                         //    api     +     data
     this.impApiService.post(auth.register_customer,this.signUp_Customer_form).subscribe(data=>{ // if you want to see data use subscribe
-    localStorage.setItem('user',data.user)
-    localStorage.setItem('token',data.access_token) // للترتيب
+    localStorage.setItem('user',data.data.user)
+    localStorage.setItem('token',data.data.access_token) // للترتيب
     this.Route.navigate(['apps/customer-home/Customerhome-list'])
     console.log(data);
    })

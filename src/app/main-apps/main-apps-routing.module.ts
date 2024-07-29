@@ -19,6 +19,8 @@ import { ViewApdateProductComponent } from './apps/restaurant/meals-restaurant/v
 import { UserOrderComponent } from './apps/restaurant/orders-restaurant/user-order/user-order.component';
 import { CustToRestaurantComponent } from './apps/restaurant/tech-support-restaurant/cust-to-restaurant/cust-to-restaurant.component';
 import { RestaurantToAdminComponent } from './apps/restaurant/tech-support-restaurant/restaurant-to-admin/restaurant-to-admin.component';
+import { AdminGuard } from '../guard/admin.guard';
+import { RestaurantGuard } from '../guard/restaurant.guard';
 
 const routes: Routes = [
 
@@ -27,6 +29,7 @@ const routes: Routes = [
 //correct, path: apps/admin-activate/adminActivate-list
   {
     path:'admin-activate',
+    canActivate:[AdminGuard],
     loadChildren: () => import('./apps/admin/activate-req/activate-req.module').then(m => m.ActivateReqModule)
   },
 
@@ -34,6 +37,7 @@ const routes: Routes = [
   //correct, path: apps/admin-dashboared/adminDashboared-list
   {
     path:'admin-dashboared',
+    canActivate:[AdminGuard],
     loadChildren: () => import('./apps/admin/admin-dashboared/admin-dashboared.module').then(m => m.AdminDashboaredModule)
   },
 
@@ -42,6 +46,7 @@ const routes: Routes = [
   //correct, path: apps/admin-ads/adminAds-list
   {
     path:'admin-ads',
+    canActivate:[AdminGuard],
     loadChildren: () => import('./apps/admin/ads-req/ads-req.module').then(m => m.AdsReqModule)
   },
 
@@ -49,12 +54,14 @@ const routes: Routes = [
 //correct, path: apps/admin-home-main/adminHomeMain-list
 {
   path:'admin-home-main',
+  canActivate:[AdminGuard],
   loadChildren: () => import('./apps/admin/home-admin/home-admin.module').then(m => m.HomeAdminModule)
 },
 
   //correct, path: apps/admin-home-ViewRest/adminHomeViewRest-list
 {
   path:'admin-home-ViewRest',
+  canActivate:[AdminGuard],
   loadChildren: () => import('./apps/admin/home-admin/home-admin.module').then(m => m.HomeAdminModule)
 },
 
@@ -62,14 +69,15 @@ const routes: Routes = [
 //correct, path: apps/admin-wallet/adminWallet-list
 {
   path:'admin-wallet',
+  canActivate:[AdminGuard],
   loadChildren: () => import('./apps/admin/setting/setting.module').then(m => m.SettingModule)
 },
-
 
 
 //correct, path: apps/admin-view-users/adminViewUsers-list
 {
   path:'admin-view-users',
+  canActivate:[AdminGuard],
   loadChildren: () => import('./apps/admin/user-manage/user-manage.module').then(m => m.UserManageModule)
 },
 
@@ -77,6 +85,7 @@ const routes: Routes = [
 //correct, path: apps/admin-user-details/adminUserDetails-list
 {
   path:'admin-user-details',
+  canActivate:[AdminGuard],
   loadChildren: () => import('./apps/admin/user-manage/user-manage.module').then(m => m.UserManageModule)
 },
 
@@ -150,11 +159,13 @@ const routes: Routes = [
 //correct, path: apps/restaurant-ads/restaurantAds-list
 {
   path:'restaurant-ads',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
 },
 
 {
   path:'restaurant-home',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/home-restaurant/home-restaurant.module').then(m => m.HomeRestaurantModule)
 },
 
@@ -162,26 +173,31 @@ const routes: Routes = [
 //correct, path: apps/restaurant-home/restaurantHome-list
 {
   path:'restaurant-home',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/ads-restaurant/ads-restaurant.module').then(m => m.AdsRestaurantModule)
 },
 
 {
   path:'meals-restaurant',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/meals-restaurant/meals-restaurant.module').then(m => m.MealsRestaurantModule)
 },
 
 {
   path:'restaurant-user-order',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/orders-restaurant/orders-restaurant.module').then(m => m.OrdersRestaurantModule)
 },
 
 
 {
   path:'tech-support-restaurant',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/tech-support-restaurant/tech-support-restaurant.module').then(m => m.TechSupportRestaurantModule)
 },
 {
   path:'restaurant-profile',
+  canActivate:[RestaurantGuard],
   loadChildren: () => import('./apps/restaurant/restaurant-profile/restaurant-profile.module').then(m => m.RestaurantProfileModule)
 },
 

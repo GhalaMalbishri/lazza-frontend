@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
 import { SignupCustomerComponent } from './auth/signup-customer/signup-customer.component';
 import { ErrorInterceptoService } from './services/error-intercepto.service';
+import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 
 @NgModule({
@@ -29,7 +31,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HttpClientModule,
     FormsModule,
     NgbModule,
+    SharedComponentsModule,
+
     NgxSpinnerModule
+
   ],
   providers: [
     {

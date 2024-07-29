@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
+
+  // userType = localStorage
+  sidebarArr = []
   sidebar_menu = [
     {
     name: 'الصفحة الرئيسية',
@@ -30,7 +33,16 @@ export class SideBarComponent implements OnInit {
 ];
 
   constructor() {
-    // type = localStorage.getItem
+
+    // if(this.userType == 'admin'){
+    //   this.sidebarArr = [{
+
+    //   }]
+    // }
+    // else {
+    //   this.sidebarArr = [{}]
+    // }
+    //  type = localStorage.getItem
     // if(type == "admin"){
     //   [{jnjkhjb}]
     // }

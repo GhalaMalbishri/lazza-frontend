@@ -66,12 +66,6 @@ const routes: Routes = [
 },
 
 
-//correct, path: apps/admin-terms/adminTerms-list
-{
-  path:'admin-terms',
-  loadChildren: () => import('./apps/admin/setting/setting.module').then(m => m.SettingModule)
-},
-
 
 //correct, path: apps/admin-view-users/adminViewUsers-list
 {
@@ -81,6 +75,12 @@ const routes: Routes = [
 
 
 //correct, path: apps/admin-user-details/adminUserDetails-list
+{
+  path:'admin-user-details',
+  loadChildren: () => import('./apps/admin/user-manage/user-manage.module').then(m => m.UserManageModule)
+},
+
+//correct, path: apps/admin-user-details/adminTeckSupport-list
 {
   path:'admin-user-details',
   loadChildren: () => import('./apps/admin/user-manage/user-manage.module').then(m => m.UserManageModule)

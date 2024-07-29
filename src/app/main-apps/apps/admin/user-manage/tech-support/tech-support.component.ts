@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-admin-wallet',
-  templateUrl: './admin-wallet.component.html',
-  styleUrls: ['./admin-wallet.component.scss']
+  selector: 'app-tech-support',
+  templateUrl: './tech-support.component.html',
+  styleUrls: ['./tech-support.component.scss']
 })
-export class AdminWalletComponent implements OnInit {
+export class TechSupportComponent implements OnInit {
 
   arr:any
 
@@ -39,6 +39,7 @@ export class AdminWalletComponent implements OnInit {
     ]
 
   }
+
 
   ngOnInit(): void {
   }

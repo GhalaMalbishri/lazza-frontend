@@ -1,0 +1,48 @@
+<div id="main-wrapper">
+
+  <div class="content-body  ">
+    <div class="container-fluid">
+
+      <div class="row justify-content-md-center">
+
+        <div class="col-lg-8" style="margin-top: 1rem;">
+          <h2 style="color: var(--primary-color); display: flex; justify-content: flex-end; margin-bottom: 1rem;">تذاكر العملاء </h2>
+
+          <table class="table">
+
+            <thead>
+              <tr>
+                <th scope="col">الحالة</th>
+                <th scope="col">النوع</th>
+                <th scope="col">التاريخ</th>
+                <th scope="col">المبلغ</th>
+                <th scope="col">الإسم</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let i of arr">
+                <td  [style.color]="i.status == 'مقبول' ? 'green' : 'var(--primary-color)'">{{i.status}}</td>
+                <td>{{i.transferType}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.amount}}</td>
+                <td>{{i.name}}</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+
+          <!-- <app-pagination> </app-pagination> -->
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

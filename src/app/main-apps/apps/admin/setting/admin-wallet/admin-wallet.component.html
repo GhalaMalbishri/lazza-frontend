@@ -70,7 +70,7 @@
 
             <tbody>
               <tr *ngFor="let i of arr">
-                <td>{{i.status}}</td>
+                <td  [style.color]="i.status == 'مقبول' ? 'green' : 'var(--primary-color)'">{{i.status}}</td>
                 <td>{{i.transferType}}</td>
                 <td>{{i.date}}</td>
                 <td>{{i.amount}}</td>

@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
 import { SignupCustomerComponent } from './auth/signup-customer/signup-customer.component';
 import { ErrorInterceptoService } from './services/error-intercepto.service';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ErrorInterceptoService } from './services/error-intercepto.service';
     LoginComponent,
     HomePageComponent,
     SignupCustomerComponent
+
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { ErrorInterceptoService } from './services/error-intercepto.service';
     HttpClientModule,
     FormsModule,
     NgbModule,
+    NgxSpinnerModule
   ],
   providers: [
     {

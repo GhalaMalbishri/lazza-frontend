@@ -41,6 +41,9 @@ header{
 .nav-link:hover {
     color: var(--primary-color);
 }
+.nav-link:focus {
+    color: var(--primary-color);
+}
 .dropdown-item:hover {
     color: var(--primary-color);
 }

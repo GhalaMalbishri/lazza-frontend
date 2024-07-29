@@ -38,7 +38,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     InputTextComponent,
     RestaurantCardComponent,
     TableButtonComponent,
-    LoaderComponent
+    LoaderComponent,
     PaginationComponent,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ImpApiService } from 'src/app/services/imp-api.service';
+import { user_manage } from 'src/constent/Route';
 
 @Component({
   selector: 'app-view-users',
@@ -9,34 +12,16 @@ export class ViewUsersComponent implements OnInit {
 
   arr:any
 
-  constructor() {
-    this.arr = [
-      {
-        name: 'name1',
-        email: 'some1@gmail.com',
-        phoneNum: 321456,
-        accountStatus: 'مفعّل',
-      },
+  constructor(private impApiService: ImpApiService, private Route: Router) {
 
-      {
-        name: 'name1',
-        email: 'some1@gmail.com',
-        phoneNum: 321456,
-        accountStatus: 'معطّل',
-      },
-
-      {
-        name: 'name1',
-        email: 'some1@gmail.com',
-        phoneNum: 321456,
-        accountStatus: 'مفعّل',
-      },
-
-    ]
 
   }
 
   ngOnInit(): void {
+    this.impApiService.get(user_manage.view_users.alluser).subscribe(data =>{
+      console.log(data.data);
+      this.arr = data.data
+    })
   }
 
 }

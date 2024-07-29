@@ -1,7 +1,8 @@
+<h2 class="main-text"> إدارة جميع
+  المستخدمين</h2>
 <div class="main">
 
-  <h2 style="color: var(--primary-color); display: flex; justify-content: flex-end; margin-bottom: 4rem;"> إدارة جميع
-    المستخدمين</h2>
+
 
   <!-- filtering tabels: each one has a different tabel-->
 
@@ -22,9 +23,9 @@
       <tr *ngFor="let i of arr">
 
         <td [style.color]="i.accountStatus == 'مفعّل' ? 'green' : 'var(--primary-color)'">{{i.accountStatus}}</td>
-        <td> <a routerLink="../popUp"> <app-table-button statement="تفاصيل" type="btn-outline-secondary"
+        <td> <a > <app-table-button statement="تفاصيل" type="btn-outline-secondary"
               class="rest"></app-table-button></a></td>
-        <td>{{i.phoneNum}}</td>
+        <td>{{i.phone}}</td>
         <td>{{i.email}}</td>
         <td>{{i.name}}</td>
       </tr>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-restaurant-admin-header',
@@ -8,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class RestaurantAdminHeaderComponent implements OnInit
  {
 
-  constructor() { }
+  constructor(private Router:Router) { }
 
   ngOnInit(): void {
   }
-
+  signout(){
+    localStorage.clear();
+    this.Router.navigate(['/auth/login']);
+  }
 }

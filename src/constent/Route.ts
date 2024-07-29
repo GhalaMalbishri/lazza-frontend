@@ -14,3 +14,11 @@ export const auth = {
 //   alluser : BASEURL + 'all-user'
 
 // }
+
+
+export const user_manage = {
+  view_users:{
+    alluser : BASEURL + 'customer'
+
+  }
+}

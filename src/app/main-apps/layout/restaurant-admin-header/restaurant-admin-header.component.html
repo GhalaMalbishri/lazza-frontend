@@ -1,6 +1,6 @@
  <!-- admin -->
 
-   <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="../../../../assets/LazzaLogo-01.png" alt="" width="100"></a>
@@ -38,25 +38,24 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <a class="navbar-brand" href="#">
           <div class="dropdown">
-            <div class="btn-group dropstart">
-              <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="btn-group dropend">
+              <button type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none; background: none;">
                 <img src="../../../../assets/avatar-icon.png" alt="" width="30" height="24">
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" routerLink="/apps/admin-wallet/adminWallet-list">الاعدادت</a></li>
-                <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+                <li><a class="dropdown-item" (click)="signout()">تسجيل خروج</a></li>
               </ul>
             </div>
           </div>
         </a>
-
       </form>
     </div>
   </div>
 </nav> -->
 
  <!-- restaurant -->
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="../../../../assets/LazzaLogo-01.png" alt="" width="100"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,13 +95,13 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <a class="navbar-brand" href="#">
           <div class="dropdown">
-            <div class="btn-group dropstart">
+            <div class="btn-group dropend">
               <button type="button" data-bs-toggle="dropdown" aria-expanded="false" style="border: none; background: none;">
                 <img src="../../../../assets/avatar-icon.png" alt="" width="40" height="30">
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" routerLink="/apps/restaurant-profile/rest-profile-list">حسابي</a></li>
-                <li><a class="dropdown-item" href="#">تسجيل خروج</a></li>
+                <li><a class="dropdown-item" (click)="signout()">تسجيل خروج</a></li>
               </ul>
             </div>
           </div>

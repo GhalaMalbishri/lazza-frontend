@@ -14,21 +14,31 @@ export class LoginComponent implements OnInit {
   loading = false
   submited = false
 
-  loginForm = this.fb.group({
-    email: ['', Validators.email],
-    password: ['', Validators.required]
-  })
+  loginForm = null
   constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-
+    this.loginForm = this.fb.group({
+      email: ['', Validators.email],
+      password: ['', Validators.required]
+    })
   }
 
   login() {
 
-    this.impApiService.post(auth.login,this.loginForm.value).subscribe(data => {
+    this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
       localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage
       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
+
+      if (data.data.user_type_id == 2) {
+        this.Route.navigate(['/apps/restaurant-home/restaurantHome-list'])
+      }
+      if (data.data.user_type_id == 1) {
+        this.Route.navigate(['/apps/admin-home-main/adminHomeMain-list'])
+      }
+      if (data.data.user_type_id == 3) {
+        this.Route.navigate(['/apps/customer-home/Customerhome-list'])
+      }
 
     })
 

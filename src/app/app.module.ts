@@ -20,7 +20,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HomePageComponent,
     SignupCustomerComponent
 
@@ -32,8 +31,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     FormsModule,
     NgbModule,
     SharedComponentsModule,
-
-    NgxSpinnerModule
+    NgxSpinnerModule,
 
   ],
   providers: [

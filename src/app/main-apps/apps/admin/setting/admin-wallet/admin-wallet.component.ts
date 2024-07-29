@@ -7,7 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminWalletComponent implements OnInit {
 
-  constructor() { }
+  arr:any
+
+  constructor() {
+    this.arr = [
+      {
+        name: 'name1',
+        amount: 456,
+        date:'21/7/2024',
+        transferType: 'سحب',
+        status: 'مقبول',
+      },
+
+      {
+        name: 'name2',
+        amount: 363,
+        date:'21/7/2024',
+        transferType: 'إضافة',
+        status: 'مقبول',
+
+      },
+
+      {
+        name: 'name3',
+        amount: 222,
+        date:'21/7/2024',
+        transferType: 'سحب',
+        status: 'مقبول',
+      },
+
+    ]
+
+  }
 
   ngOnInit(): void {
   }

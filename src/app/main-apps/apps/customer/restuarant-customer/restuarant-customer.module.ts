@@ -5,7 +5,6 @@ import { RestuarantCustomerRoutingModule } from './restuarant-customer-routing.m
 import { ViewRestaurantComponent } from './view-restaurant/view-restaurant.component';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
-import { PaymentComponent } from './payment/payment.component';
 import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
 
 
@@ -14,7 +13,7 @@ import { SharedComponentsModule } from 'src/app/shared-components/shared-compone
     ViewRestaurantComponent,
     ProductsComponent,
     CartComponent,
-    PaymentComponent
+    
   ],
   imports: [
     CommonModule,

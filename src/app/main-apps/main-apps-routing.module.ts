@@ -7,7 +7,6 @@ import { AdsPageComponent } from './apps/admin/ads-req/ads-page/ads-page.compone
 import { MainPageComponent } from './apps/admin/home-admin/main-page/main-page.component';
 import { AdminRestViewComponent } from './apps/admin/home-admin/admin-rest-view/admin-rest-view.component';
 import { AdminWalletComponent } from './apps/admin/setting/admin-wallet/admin-wallet.component';
-import { TermsConditionComponent } from './apps/admin/setting/terms-condition/terms-condition.component';
 import { HomeCustomerRoutingModule } from './apps/customer/home-customer/home-customer-routing.module';
 import { CustMainPageComponent } from './apps/customer/home-customer/cust-main-page/cust-main-page.component';
 import { ViewUsersComponent } from './apps/admin/user-manage/view-users/view-users.component';

@@ -8,6 +8,7 @@ import { RestaurantCardComponent } from './restaurant-card/restaurant-card.compo
 import { RouterModule } from '@angular/router';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { TableButtonComponent } from './table-button/table-button.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 
@@ -20,6 +21,7 @@ import { TableButtonComponent } from './table-button/table-button.component';
     InputTextComponent,
     RestaurantCardComponent,
     TableButtonComponent,
+    PaginationComponent,
 
 
   ],
@@ -34,7 +36,7 @@ import { TableButtonComponent } from './table-button/table-button.component';
     InputTextComponent,
     RestaurantCardComponent,
     TableButtonComponent,
-    
+    PaginationComponent,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 

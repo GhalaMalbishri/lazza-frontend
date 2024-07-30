@@ -13,21 +13,24 @@
 
             <thead>
               <tr>
+                <th scope="col">الإسم</th>
+                <th scope="col">التاريخ</th>
                 <th scope="col">الحالة</th>
                 <th scope="col">النوع</th>
-                <th scope="col">التاريخ</th>
-                <th scope="col">المبلغ</th>
-                <th scope="col">الإسم</th>
+
+
               </tr>
             </thead>
 
             <tbody>
               <tr *ngFor="let i of arr">
+                <td>{{i.name}}</td>
+                <td>{{i.date}}</td>
                 <td  [style.color]="i.status == 'مقبول' ? 'green' : 'var(--primary-color)'">{{i.status}}</td>
                 <td>{{i.transferType}}</td>
-                <td>{{i.date}}</td>
-                <td>{{i.amount}}</td>
-                <td>{{i.name}}</td>
+
+
+
               </tr>
 
 
@@ -46,4 +49,5 @@
 
   </div>
 
+ 
 </div>

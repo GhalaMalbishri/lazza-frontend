@@ -35,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added
+
   ],
   providers: [
     {

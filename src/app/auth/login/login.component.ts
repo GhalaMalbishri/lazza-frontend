@@ -27,14 +27,13 @@ export class LoginComponent implements OnInit {
 
   login() {
 
-
-
     this.submited = true
     if(this.loginForm.invalid){
 
       return this.toastr.error("خطا","البيانات المدخلة غير صحيحة");
 
     }
+
     this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
       localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage
       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage

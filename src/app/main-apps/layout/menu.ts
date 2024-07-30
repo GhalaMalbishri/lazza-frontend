@@ -14,6 +14,14 @@ export const MENU = [
   },
 
   {
+    label: 'إدارة المستخدمين',
+    isTitle: false,
+    link: 'apps/admin-view-users/adminViewUsers-list',
+    user_type: [1],
+  },
+
+
+  {
     label: 'الطلبات',
     isTitle: true,
     user_type: [1],
@@ -31,12 +39,6 @@ export const MENU = [
     ]
   },
 
-  {
-    label: 'إدارة المستخدمين',
-    isTitle: false,
-    link: 'apps/admin-view-users/adminViewUsers-list',
-    user_type: [1],
-  },
 
 
   // customer

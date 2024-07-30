@@ -18,7 +18,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +35,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added
-
 
   ],
   providers: [

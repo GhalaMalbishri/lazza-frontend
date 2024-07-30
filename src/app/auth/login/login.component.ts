@@ -27,11 +27,10 @@ export class LoginComponent implements OnInit {
 
   login() {
 
-    this.toastr.info("خطا","البيانات المدخلة غير صحيحة");
     this.submited = true
     if(this.loginForm.invalid){
 
-      return
+      return this.toastr.error("خطا","البيانات المدخلة غير صحيحة");
 
     }
 

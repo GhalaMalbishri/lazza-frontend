@@ -7,31 +7,48 @@
   <!-- filtering tabels: each one has a different tabel-->
 
 
-  <table class="table">
+<select name="" id="" (change)="filter_by_status($event.target.value)" *ngIf="!loading">
+  <option value="">تصفية حسب الحالة</option>
+  <option value="مفعّل">مفعّل</option>
+  <option value="غير مفعّل">غير مفعّل</option>
+</select>
+
+<app-loader *ngIf="loading"></app-loader>
+
+  <table class="table" *ngIf="loading == false">
 
     <thead>
       <tr>
-        <th scope="col">حالة الحساب</th>
-        <th scope="col">تفاصيل الحساب</th>
-        <th scope="col">رقم الجوال</th>
-        <th scope="col">الإيميل</th>
         <th scope="col">الإسم</th>
+        <th scope="col">الإيميل</th>
+        <th scope="col">رقم الجوال</th>
+        <th scope="col">تفاصيل الحساب</th>
+        <th scope="col">حالة الحساب</th>
+
+
+
+
       </tr>
     </thead>
 
     <tbody>
       <tr *ngFor="let i of arr">
 
-        <td [style.color]="i.accountStatus == 'مفعّل' ? 'green' : 'var(--primary-color)'">{{i.accountStatus}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.phone}}</td>
         <td> <a > <app-table-button statement="تفاصيل" type="btn-outline-secondary"
               class="rest"></app-table-button></a></td>
-        <td>{{i.phone}}</td>
-        <td>{{i.email}}</td>
-        <td>{{i.name}}</td>
+              <td [style.color]="i.account_status == 'مفعّل' ? 'green' : 'var(--primary-color)'">{{i.account_status}}</td>
+
+
+
       </tr>
 
 
     </tbody>
   </table>
+
+  <p *ngIf="arr.length == 0">لا يوجد بيانات</p>
 
 </div>

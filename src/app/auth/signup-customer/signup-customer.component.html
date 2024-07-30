@@ -1,5 +1,4 @@
-
-<div class="form-container sign-in-container">
+<!-- <div class="form-container sign-in-container">
 
     <h1>أدخل معلوماتك</h1>
 
@@ -10,9 +9,9 @@
     <input [(ngModel)]="signUp_Customer_form.phone" style="margin-bottom: 4%;" class="input" type="number" placeholder="رقم الجوال" />
 
     <button (click)="signUp()">sent</button>
-</div>
+</div> -->
 
-<div class="overlay-container">
+<!-- <div class="overlay-container">
   <div class="overlay">
     <div class="overlay-panel overlay-left">
     </div>
@@ -22,77 +21,28 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 
-<!-- ------------------------------------- -->
-<!---
-<title>تسجيل دخول مطعم </title>
-</head>
-<body>
-    <div class="container">
-        <header>تسجيل</header>
+<form>
+  <div class="container">
+    <div class="login form" style="position: relative;">
+      <img src="../../../assets/LazzaLogo-01.png" alt="" style="width:100 ; height: 100px; margin-right:4.8rem ;">
+      <header>تسجيل جديد</header>
 
-        <form action="#">
-            <div class="form first">
-                <div class="details personal">
-                    <span class="title">اكمل المعلومات التالية</span>
 
-                    <div class="fields">
-                        <div class="input-field">
+      <input type="text"  placeholder="الأسم">
+      <input type="number"  placeholder="رقم الهوية الوطنية">
+      <input type="number"  placeholder="رقم الجوال">
+      <input type="email"  placeholder="البريد الالكتروني">
+      <input type="password"  placeholder=" كلمة المرور">
+      <input type="submit" class="button" value="سجل" style="background-color: var(--primary-color);">
 
-                            <input type="text" placeholder="اسم المطعم" required>
-                        </div>
-
-                        <div class="input-field">
-
-                            <input type="email" placeholder="الايميل" required>
-                        </div>
-
-                        <div class="input-field">
-
-                            <input type="number" placeholder="رقم الجوال" required>
-                        </div>
-
-                        <div class="input-field">
-
-                            <input type="password" placeholder="كلمة السر" required>
-                        </div>
--->
-                      <!--   <div class="input-field">
-                            <label>صورة المطعم</label>
-                            <input type="file" placeholder="صورة المطعم" required class="image">
-                        </div>
-
-                        <div class="input-field">
-                            <label>السجل التجاري</label>
-                            <input type="file" placeholder="Enter your ccupation" required class="image">
-                        </div>
-
-                        <div class="input-field">
-
-                            <input type="text" placeholder="موقع المطعم" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>الشهادة الصحية</label>
-                            <input type="file" placeholder="Enter your ccupation" required class="image">
-                        </div>
-
-                        <div class="input-field">
-
-                            <input type="number" placeholder="رقم الايبان" required>
-                        </div>
-
-                        <div class="input-field">
-
-                            <input type="number" placeholder="رقم الحساب" required>
-                        </div>
-
-                        <app-button anyting="سجل"></app-button>
-                    </div>
-                </div>
-            </div>
-
--->
-
+      <div class="signup">
+        <span class="signup"> لديك حساب ؟
+          <a routerLink="/auth/log-in"><label for="check" style="color: var(--primary-color);">سجل دخول</label></a>
+        </span>
+      </div>
+    </div>
+  </div>
+</form>

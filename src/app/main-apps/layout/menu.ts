@@ -12,6 +12,7 @@ export const MENU = [
     link: '/apps/admin-dashboared/adminDashboared-list',
     user_type: [1],
   },
+
   {
     label: 'الطلبات',
     isTitle: true,
@@ -30,12 +31,33 @@ export const MENU = [
     ]
   },
 
+  {
+    label: 'إدارة المستخدمين',
+    isTitle: false,
+    link: 'apps/admin-view-users/adminViewUsers-list',
+    user_type: [1],
+  },
+
 
   // customer
   {
     label: 'الصفحة الرئيسية',
     isTitle: false,
     link: '/apps/customer-home/Customerhome-list',
+    user_type: [3],
+  },
+
+  {
+    label: 'المطاعم',
+    isTitle: false,
+    link: '/apps/customer-view-rest/customerViewRest-list',
+    user_type: [3],
+  },
+
+  {
+    label: 'طلباتي',
+    isTitle: false,
+    link: '/apps/current-orders/currentOrder-list',
     user_type: [3],
   },
 ]

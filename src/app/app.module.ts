@@ -14,7 +14,8 @@ import { SignupCustomerComponent } from './auth/signup-customer/signup-customer.
 import { ErrorInterceptoService } from './services/error-intercepto.service';
 import { SharedComponentsModule } from './shared-components/shared-components.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     NgbModule,
     SharedComponentsModule,
     NgxSpinnerModule,
-
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     {

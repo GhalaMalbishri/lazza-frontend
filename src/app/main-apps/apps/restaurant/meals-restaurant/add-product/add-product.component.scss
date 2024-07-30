@@ -6,8 +6,16 @@
 }
 
 .container {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Add spacing between sections if needed */
   justify-content: center;
+}
+
+.product-info input {
+  display: block;
+  width: 50%;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -22,7 +30,6 @@
 .card h3 {
   font-size: 22px;
   font-weight: 600;
-
 }
 
 .drop_box {
@@ -59,20 +66,11 @@
   transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
   text-decoration: none;
   background-color: #ffffff;
   color: #005af0;
   padding: 10px 20px;
   border: none;
   outline: 1px solid #010101;
-}
-.form input {
-  margin: 10px 0;
-  width: 100%;
-  background-color: #e2e2e2;
-  border: none;
-  outline: none;
-  padding: 12px 20px;
-  border-radius: 4px;
 }

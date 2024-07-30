@@ -44,7 +44,7 @@ body{
   margin-bottom: 1.5rem;
 }
  .form input{
-   height: 60px;
+   height: 40px;
    width: 100%;
    padding: 0 15px;
    font-size: 17px;
@@ -91,4 +91,35 @@ a{
 }
 .signup label:hover{
   text-decoration: underline;
+}
+
+
+
+/*OTP CSS*/
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.input {
+  width: 40px;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  font-size: 36px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.input:focus {
+  border-bottom: 3px solid orange;
+  outline: none;
+}
+
+.input:nth-child(1) {
+  cursor: pointer;
+  pointer-events: all;
 }

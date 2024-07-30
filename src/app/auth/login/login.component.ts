@@ -5,6 +5,7 @@ import { ImpApiService } from 'src/app/services/imp-api.service';
 import { auth } from 'src/constent/Route';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   submited = false
 
   loginForm = null
-  constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder , private toastr: ToastrService) { }
+  constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder, private toastr: ToastrService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -28,10 +29,8 @@ export class LoginComponent implements OnInit {
   login() {
 
     this.submited = true
-    if(this.loginForm.invalid){
-
-      return this.toastr.error("خطا","البيانات المدخلة غير صحيحة");
-
+    if (this.loginForm.invalid) {
+      return this.toastr.error("خطا", "البيانات المدخلة غير صحيحة");
     }
 
     this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
@@ -49,10 +48,12 @@ export class LoginComponent implements OnInit {
       }
 
     })
-
   }
+  openModal(modal) {
+    this.modalService.open(modal, { centered: true })
+  }
+  
 }
-
 
 // export class LoginComponent implements OnInit {
 //   loading = false
@@ -97,4 +98,4 @@ export class LoginComponent implements OnInit {
 //     })
 
 //   }
-// }
+//

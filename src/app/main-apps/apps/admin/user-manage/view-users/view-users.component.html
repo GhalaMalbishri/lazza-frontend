@@ -6,12 +6,13 @@
 
   <!-- filtering tabels: each one has a different tabel-->
 
-
-<select name="" id="" (change)="filter_by_status($event.target.value)" *ngIf="!loading">
+<!-- <div style="background-color: var(--white);"> -->
+<select name="" id="" (change)="filter_by_status($event.target.value)" *ngIf="!loading" style=" margin-bottom: 1rem;">
   <option value="">تصفية حسب الحالة</option>
   <option value="مفعّل">مفعّل</option>
   <option value="غير مفعّل">غير مفعّل</option>
 </select>
+
 
 <app-loader *ngIf="loading"></app-loader>
 

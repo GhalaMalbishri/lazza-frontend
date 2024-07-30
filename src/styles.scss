@@ -1,10 +1,13 @@
 
 @import "~ngx-spinner/animations/ball-spin-clockwise.css";
+@import 'ngx-toastr/toastr';
+
+
 :root {
 
   --primary-color: #DC4727;
 
-  --Background: #f4f4f4;
+  --Background: #F7F7F7;
   --white:#FFFFFFff;
 
 
@@ -42,7 +45,7 @@ h6{
  h2 , h3, h4{
   color: var(--primary-color);
   align-self: self-end;
-  
+
   font-family: var(--fontFamily);
 }
 

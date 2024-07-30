@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ImpApiService } from 'src/app/services/imp-api.service';
 import { auth } from 'src/constent/Route';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   submited = false
 
   loginForm = null
-  constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder) { }
+  constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder , private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -25,6 +26,14 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+
+    this.toastr.info("خطا","البيانات المدخلة غير صحيحة");
+    this.submited = true
+    if(this.loginForm.invalid){
+
+      return
+
+    }
 
     this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
       localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage

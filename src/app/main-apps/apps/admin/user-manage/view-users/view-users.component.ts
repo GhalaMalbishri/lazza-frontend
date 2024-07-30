@@ -21,11 +21,11 @@ export class ViewUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true
-    this.impApiService.get(user_manage.view_users.alluser).subscribe(data =>{
+    this.impApiService.get(user_manage.view_users.alluser).subscribe(res =>{
 
-      console.log(data.data);
-      this.arr = data.data
-      this.arrv2 = data.data
+      console.log(res.data);
+      this.arr = res.data
+      this.arrv2 = res.data
       this.loading = false
     }, (error)=>{
       this.loading = false

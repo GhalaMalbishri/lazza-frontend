@@ -5,22 +5,28 @@
 
     <thead>
       <tr>
-        <th scope="col">الحـالـــة</th>
-        <th scope="col">تفاصيل الطلب</th>
-        <th scope="col">رقم الجوال</th>
-        <th scope="col">الإيميل</th>
         <th scope="col">اسم المطعم</th>
+        <th scope="col">الإيميل</th>
+        <th scope="col">رقم الجوال</th>
+        <th scope="col">تفاصيل الطلب</th>
+        <th scope="col">الحـالـــة</th>
+
+
       </tr>
     </thead>
 
     <tbody>
       <tr *ngFor="let i of arr">
 
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.restNum}}</td>
+        <td> <a  routerLink="../popUp">  <app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest"></app-table-button></a></td>
         <td style="display: flex; justify-content: space-evenly;"><a  routerLink="../popUp">  <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button></a>
-          <a  routerLink="../popUp">  <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button></a></td>        <td> <a  routerLink="../popUp">  <app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest"></app-table-button></a></td>
-              <td>{{i.restNum}}</td>
-              <td>{{i.email}}</td>
-              <td>{{i.name}}</td>
+          <a  routerLink="../popUp">  <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button></a></td>
+
+
+
       </tr>
 
 

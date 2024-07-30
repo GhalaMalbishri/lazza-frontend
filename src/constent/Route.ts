@@ -17,8 +17,13 @@ export const auth = {
 
 
 export const user_manage = {
+
+
   view_users:{
-    alluser : BASEURL + 'customer'
+    alluser : BASEURL + 'customer',
+    userById : BASEURL + "customer/" 
 
   }
+
+
 }

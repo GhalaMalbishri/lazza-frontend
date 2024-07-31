@@ -13,7 +13,7 @@ export class CustomerGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const user = JSON.parse(localStorage.getItem('user_type'));
-    if (user == 2) {
+    if (user == 3) {
       return true;
     } else {
 

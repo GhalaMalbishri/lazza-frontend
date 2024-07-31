@@ -29,7 +29,6 @@
     <ng-template #content let-modal>
       <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">تفاصيل الطلب</h4>
-        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
       </div>
       <div class="modal-body">
 
@@ -62,21 +61,21 @@
 
           </div>
 
-           <div class="d-flex justify-content-center gap-2">
-            <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button>
-            <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button>
-           </div>
+
         </form>
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
+
+        <div class="d-flex  gap-2">
+          <app-table-button statement="رفض" type="btn-outline-danger" class="rest" (click)="modal.close('Save click')"></app-table-button>
+          <app-table-button statement="قبول" type="btn-outline-success" class="rest" (click)="modal.close('Save click')"></app-table-button>
+         </div>
       </div>
     </ng-template>
 
   </table>
 
 </div>
-
 
 

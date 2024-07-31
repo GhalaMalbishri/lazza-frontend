@@ -1,4 +1,23 @@
 <h2 class="main-text">اضافة اعلان</h2>
 
+<form [formGroup]="add_new_ad_form" (ngSubmit)="submit_ad()" enctype="multipart/form-data">
 
+<div class="container">
+  <div class="mb-3">
+    <label for="formFile" class="form-label-lg"style="margin-bottom: 10px;">ادخل صورة الاعلان</label>
+    <input class="form-control" formControlName="image" type="file" id="formFile" (change)="selectImg($event)">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label-lg"style="margin-bottom: 4px;">وصف الاعلان</label>
+    <textarea class="form-control" type="text"  formControlName="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="col-form-label-lg" style="margin-bottom: 3px;">مدة الاعلان</label>
+    <input type="number" class="form-control" formControlName="duration" id="exampleFormControlInput1" placeholder="">
+  </div>
+  <div class="mb-3">
+    <input type="submit" class="button" value="سجل">
+  </div>
+</div>
 
+</form>

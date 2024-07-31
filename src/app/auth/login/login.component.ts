@@ -13,14 +13,13 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loading = false
   submited = false
 
   loginForm = null
   constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder, private toastr: ToastrService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    this.loginForm = this.fb.group({
+      this.loginForm = this.fb.group({
       email: ['', Validators.email],
       password: ['', Validators.required]
     })
@@ -33,7 +32,7 @@ export class LoginComponent implements OnInit {
       return this.toastr.error("خطا", "البيانات المدخلة غير صحيحة");
     }
 
-    this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
+      this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
       localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage
       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
 
@@ -52,7 +51,7 @@ export class LoginComponent implements OnInit {
   openModal(modal) {
     this.modalService.open(modal, { centered: true })
   }
-  
+
 }
 
 // export class LoginComponent implements OnInit {

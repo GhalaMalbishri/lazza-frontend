@@ -22,7 +22,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     HomePageComponent,
-    SignupCustomerComponent
 
   ],
   imports: [

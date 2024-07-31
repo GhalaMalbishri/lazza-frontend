@@ -20,10 +20,18 @@ export const user_manage = {
 
 
   view_users:{
+    // ممكن الكومبونت ذا له اكثر من api
     alluser : BASEURL + 'customer',
-    userById : BASEURL + "customer/" 
+    userById : BASEURL + "customer/"
 
   }
 
 
+}
+
+//restaurant
+export const ads_restaurant = {
+  request_ad:{
+    add_ads: BASEURL + 'ad'
+  }
 }

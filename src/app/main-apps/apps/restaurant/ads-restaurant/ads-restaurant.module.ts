@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdsRestaurantRoutingModule } from './ads-restaurant-routing.module';
 import { RequestAdComponent } from './request-ad/request-ad.component';
 import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { SharedComponentsModule } from 'src/app/shared-components/shared-compone
   imports: [
     CommonModule,
     AdsRestaurantRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdsRestaurantModule { }

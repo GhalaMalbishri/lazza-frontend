@@ -20,7 +20,7 @@ import { SharedComponentsModule } from '../shared-components/shared-components.m
     LoginComponent,
     LogoutComponent,
     NotFoundComponent,
-    // SignUpComponent,
+    SignupCustomerComponent,
     SignupRestaurantComponent,
     SignupUserTypeComponent,
     ResetpasswordComponent,

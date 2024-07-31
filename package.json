@@ -23,6 +23,7 @@
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.3.3",
     "echarts": "^5.5.1",
+    "ng-otp-input": "^1.9.3",
     "ngx-echarts": "^18.0.0",
     "ngx-spinner": "^13.1.1",
     "ngx-toastr": "^14.3.0",

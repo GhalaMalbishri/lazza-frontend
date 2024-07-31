@@ -21,6 +21,7 @@ import { CustToRestaurantComponent } from './apps/restaurant/tech-support-restau
 import { RestaurantToAdminComponent } from './apps/restaurant/tech-support-restaurant/restaurant-to-admin/restaurant-to-admin.component';
 import { AdminGuard } from '../guard/admin.guard';
 import { RestaurantGuard } from '../guard/restaurant.guard';
+import { CustomerGuard } from '../guard/customer.guard';
 
 const routes: Routes = [
 
@@ -102,54 +103,63 @@ const routes: Routes = [
 //correct, path: /apps/customer-home/Customerhome-list
 {
   path:'customer-home',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/home-customer/home-customer.module').then(m => m.HomeCustomerModule)
 },
 
 //correct, path: apps/current-orders/currentOrder-list
 {
   path:'current-orders',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
 
 //correct, path: apps/previous-orders/previousOrder-list
 {
   path:'previous-orders',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/orders-customer/orders-customer.module').then(m => m.OrdersCustomerModule)
 },
 
 //correct, path: apps/customer-wallet/customerWallet-list
 {
   path:'customer-wallet',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule)
 },
 
 //correct, path: apps/customer-profile/CustomerProfile-list
 {
   path:'customer-profile',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/profile-customer/profile-customer.module').then(m => m.ProfileCustomerModule)
 },
 
 //correct, path: apps/customer-cart/customerCart-list
 {
   path:'customer-cart',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
 //correct, path: apps/customer-payment/customerPayment-list
 {
   path:'customer-payment',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
 //correct, path: apps/customer-products/customerProducts-list
 {
   path:'customer-products',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 
 //correct, path: apps/customer-view-rest/customerViewRest-list
 {
   path:'customer-view-rest',
+  canActivate:[CustomerGuard],
   loadChildren: () => import('./apps/customer/restuarant-customer/restuarant-customer.module').then(m => m.RestuarantCustomerModule)
 },
 

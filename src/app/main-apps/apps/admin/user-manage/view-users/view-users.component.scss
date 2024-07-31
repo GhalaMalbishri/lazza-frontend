@@ -44,3 +44,22 @@
    font-weight: 500;
  }
 
+
+ .modal-body{
+  direction: rtl;
+}
+.card-numbers{
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between
+}
+
+.card-number{
+ position: relative;
+ top: 30px;
+}
+
+.card-detils > input{
+  width: 400px;
+}
+

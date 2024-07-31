@@ -16,6 +16,7 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgOtpInputModule } from  'ng-otp-input';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgxSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), // ToastrModule added
-
+    NgOtpInputModule,
+    NgxSpinnerModule
   ],
   providers: [
     {

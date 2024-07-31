@@ -26,17 +26,15 @@
       <img src="../../../assets/LazzaLogo-01.png" alt="" style="width:100 ; height: 100px; margin-right:4.8rem ;">
       <header>تسجيل دخول</header>
 
-      <span *ngIf="this.loginForm.get('email').invalid && submited == true" style="color: red;">البريد الالكتروني
-        مطلوب</span>
+      <span *ngIf="this.loginForm.get('email').invalid"style="color: red;">البريد الالكتروني مطلوب</span>
 
       <input type="text" formControlName="email" placeholder="ادخل الايميل">
 
       <input type="password" formControlName="password" placeholder="ادخل كلمة المرور">
-      
       <a style="color: var(--primary-color);">هل نسيت كلمة المرور ؟</a>
 
-      <input type="submit" class="button" value="سجل" style="background-color: var(--primary-color); text-align: center;" >
-
+     <!-- <input (click)="openModal(content)" class="button" value="سجل" style="background-color: var(--primary-color); text-align: center;" > -->
+     <input type="submit" class="button" value="سجل" style="background-color: var(--primary-color); text-align: center;" >
       <div class="signup">
         <span class="signup">ليس لديك حساب ؟
           <a routerLink="/auth/user-type"><label for="check" style="color: var(--primary-color);">انضم
@@ -48,25 +46,18 @@
 </form>
 
 
-<!--pop up -->
 
-<!-- <ng-template #content let-modal>
+<!--
+ <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title"></h4>
 
   </div>
-  <div class="modal-body text-center">
+  <div class="modal-body">
 
     <h2>ادخل رمز التحقق</h2>
+    <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:5}"></ng-otp-input>
 
-    <div class="container1">
-      <div id="inputs" class="inputs">
-        <input class="input" type="text" inputmode="numeric" maxlength="1" />
-        <input class="input" type="text" inputmode="numeric" maxlength="1" />
-        <input class="input" type="text" inputmode="numeric" maxlength="1" />
-        <input class="input" type="text" inputmode="numeric" maxlength="1" />
-      </div>
-    </div>
   </div>
 
   <div class="modal-footer justify-content-center">

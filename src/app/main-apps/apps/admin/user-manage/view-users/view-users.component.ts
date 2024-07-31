@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ImpApiService } from 'src/app/services/imp-api.service';
 import { user_manage } from 'src/constent/Route';
 
@@ -14,7 +15,7 @@ export class ViewUsersComponent implements OnInit {
   arrv2:any
   status_filter = ''
 
-  constructor(private impApiService: ImpApiService, private Route: Router) {
+  constructor(private impApiService: ImpApiService, private Route: Router, private modalService: NgbModal) {
 
 
   }
@@ -46,5 +47,11 @@ export class ViewUsersComponent implements OnInit {
 
 
   }
+
+  openModal(modal) {
+    this.modalService.open(modal, { size: 'lg' })
+  }
+
+
 
 }

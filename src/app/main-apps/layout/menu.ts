@@ -16,7 +16,7 @@ export const MENU = [
   {
     label: 'إدارة المستخدمين',
     isTitle: false,
-    link: 'apps/admin-view-users/adminViewUsers-list',
+    link: '/apps/admin-view-users/adminViewUsers-list',
     user_type: [1],
   },
 
@@ -39,6 +39,23 @@ export const MENU = [
     ]
   },
 
+  // {
+  //   imgPath: '../../../../assets/avatar-icon.png',
+  //   isTitle: true,
+  //   user_type: [1],
+  //   subItems: [
+  //     {
+  //       label: 'الاعدادت',
+  //       link: '/apps/admin-wallet/adminWallet-list',
+  //       user_type: [1],
+  //     },
+  //     {
+  //       label: 'تسجيل خروج',
+  //       link: '/apps/admin-ads/adminAds-list',
+  //       user_type: [1],
+  //     },
+  //   ]
+  // },
 
 
   // customer
@@ -62,4 +79,66 @@ export const MENU = [
     link: '/apps/current-orders/currentOrder-list',
     user_type: [3],
   },
+
+
+
+  // Restaurant
+  {
+    label: 'الصفحة الرئيسية',
+    isTitle: false,
+    link: '/apps/restaurant-home/restaurantHome-list',
+    user_type: [2],
+  },
+
+  {
+    label: 'الطلبات',
+    isTitle: false,
+    link: '/apps/restaurant-user-order/orders-restaurant-list',
+    user_type: [2],
+  },
+
+
+  {
+    label: 'الوجبات',
+    isTitle: true,
+    user_type: [2],
+    subItems: [
+      {
+        label: 'عرض الوجبات',
+        link: '/apps/meals-restaurant/restaurant-view-update-products-list',
+        user_type: [2],
+      },
+      {
+        label: 'طلبات الاعلانات',
+        link: '/apps/meals-restaurant/restaurant-add-products-list',
+        user_type: [2],
+      },
+    ]
+  },
+
+  {
+    label: 'الاعلانات',
+    isTitle: false,
+    link: '/apps/restaurant-ads/restaurantAds-list',
+    user_type: [2],
+  },
+
+  {
+    label: 'الدعم الفني',
+    isTitle: true,
+    user_type: [2],
+    subItems: [
+      {
+        label: 'العملاء',
+        link: '/apps/tech-support-restaurant/cust-to-restaurant-list',
+        user_type: [2],
+      },
+      {
+        label: 'المسؤول',
+        link: '/apps/tech-support-restaurant/restaurant-to-admin-list',
+        user_type: [2],
+      },
+    ]
+  },
+
 ]

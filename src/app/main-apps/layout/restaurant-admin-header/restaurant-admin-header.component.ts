@@ -23,6 +23,7 @@ export class RestaurantAdminHeaderComponent implements OnInit {
     }
     this.menu = arrayList
   }
+  
   signout() {
     localStorage.clear();
     this.Router.navigate(['/auth/login']);

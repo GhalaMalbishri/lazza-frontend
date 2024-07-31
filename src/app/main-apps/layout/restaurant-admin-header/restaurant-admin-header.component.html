@@ -16,12 +16,16 @@
         <!-- <ng-container *ngFor="let item of menu">
 
 
+           <!--  items 1: no children-->
+
           <ng-container *ngIf="!item.isTitle">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" routerLink="{{item.link}}">{{item.label}}</a>
             </li>
           </ng-container>
 
+
+           <!--  items 2: has children -->
 
           <ng-container *ngIf="item.isTitle">
             <li class="nav-item dropdown">
@@ -68,16 +72,22 @@
           <a class="nav-link" aria-disabled="true" routerLink="/apps/admin-user-details/adminTeckSupport-list">الدعم الفني</a>
         </li> -->
 
-      <!-- </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+      </ul>
+
+
+
         <a class="navbar-brand" href="#">
+
+          <!-- profile icon-->
           <div class="dropdown">
             <div class="btn-group dropend">
               <button type="button" data-bs-toggle="dropdown" aria-expanded="false"
                 style="border: none; background: none;">
                 <img src="../../../../assets/avatar-icon.png" alt="" width="30" height="24">
               </button>
+
+              <!-- dropdown-->
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" routerLink="/apps/admin-wallet/adminWallet-list">الاعدادت</a></li>
                 <li><a class="dropdown-item" (click)="signout()">تسجيل خروج</a></li>
@@ -85,7 +95,8 @@
             </div>
           </div>
         </a>
-      </form>
+
+
     </div>
   </div>
 </nav> -->
@@ -105,6 +116,7 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/apps/restaurant-user-order/orders-restaurant-list">الطلبات</a>
         </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             الوجبات
@@ -117,6 +129,7 @@
         <li class="nav-item">
           <a class="nav-link" aria-disabled="true" routerLink="/apps/restaurant-ads/restaurantAds-list">الاعلانات</a>
         </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             الدعم الفني
@@ -127,6 +140,8 @@
           </ul>
         </li>
       </ul>
+
+
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <a class="navbar-brand" href="#">

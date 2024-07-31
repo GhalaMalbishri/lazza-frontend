@@ -28,16 +28,18 @@
 
       <span *ngIf="this.loginForm.get('email').invalid && submited == true" style="color: red;">البريد الالكتروني
         مطلوب</span>
-      <input type="text" formControlName="email" placeholder="ادخل الايميل">
-      <input type="password" formControlName="password" placeholder="ادخل كلمة المرور">
-      <a style="color: var(--primary-color);">هل نسيت كلمة المرور ؟</a>
 
+      <input type="text" formControlName="email" placeholder="ادخل الايميل">
+
+      <input type="password" formControlName="password" placeholder="ادخل كلمة المرور">
+      
+      <a style="color: var(--primary-color);">هل نسيت كلمة المرور ؟</a>
 
       <input type="submit" class="button" value="سجل" style="background-color: var(--primary-color); text-align: center;" >
 
       <div class="signup">
         <span class="signup">ليس لديك حساب ؟
-          <a routerLink="/auth/signup-customer"><label for="check" style="color: var(--primary-color);">انضم
+          <a routerLink="/auth/user-type"><label for="check" style="color: var(--primary-color);">انضم
               إلينا</label></a>
         </span>
       </div>

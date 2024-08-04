@@ -35,3 +35,18 @@ export const ads_restaurant = {
     add_ads: BASEURL + 'ad'
   }
 }
+
+//customer
+
+export const Customer_home = {
+
+  restaurant_ad:{
+    // ممكن الكومبونت ذا له اكثر من api
+    show_ad : BASEURL + 'ad/active-ads'
+
+  },
+
+  restaurant_card:{
+     getCard: BASEURL + 'restaurant/restaurants-cards'
+  },
+}

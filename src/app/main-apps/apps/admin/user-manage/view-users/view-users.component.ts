@@ -17,7 +17,6 @@ export class ViewUsersComponent implements OnInit {
 
   constructor(private impApiService: ImpApiService, private Route: Router, private modalService: NgbModal) {
 
-
   }
 
   ngOnInit(): void {

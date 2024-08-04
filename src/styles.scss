@@ -32,8 +32,12 @@ html, body
   height: 100%;
   font-family: var(--fontFamily);
   direction: rtl;
-  background-color: var( --Background);
+
+  min-height: 100vh;
+ background-color: var(--Background);
+
 }
+
 
 h6{
 

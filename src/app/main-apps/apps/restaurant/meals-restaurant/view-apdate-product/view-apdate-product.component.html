@@ -1,47 +1,161 @@
-<h2 class="main-text">المنتجات</h2>
+<h2 class="main-text">أدارة المنتجات</h2>
 
-<div class="horizontal-scroll">
-  <div class="sections d-flex justify-content-center p-4 gap-3">
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-    <app-button  anyting="قسم الدجاج" type="btn-outline-danger" class="rest"></app-button>
-  </div>
-</div>
-<div class="products">
+<!--"background: #fff;  box-shadow: 0 5px 10px rgba(0,0,0,0.1);-->
+<app-table-button type="btn btn-outline-danger" style="float: left; margin-left: 100px;"(click)="openModal(content2)">اضافة كوبون خصم</app-table-button>
+<div style="margin-top: 40px;position: relative;">
+  <h4 style="margin-right: 100px">الاقسام</h4>
+  <div class="horizontal-scroll"
+    style="margin-right: 100px;margin-left: 100px;background: #fff;box-shadow: 0 5px 10px rgba(0,0,0,0.1);">
+    <button style="float:left ; color: var(--primary-color); border: none; background-color:#fff ; margin: 2px;"
+      (click)="openModal(content)"><i class="bi bi-plus"></i>اضافة قسم</button>
+    <div class="sections d-flex gap-3">
 
+      <app-table-button statement="" type="btn btn-outline-danger" class="rest" style="margin-top: 50px;">اضافة
+        قسم</app-table-button>
+      <app-table-button statement="" type="btn btn-outline-danger" class="rest" style="margin-top: 50px;">اضافة
+        قسم</app-table-button>
+      <app-table-button statement="" type="btn btn-outline-danger" class="rest" style="margin-top: 50px;">اضافة
+        قسم</app-table-button>
 
-  <div class="card rounded-5" style="width: 13rem;">
-    <img class="card-img-top" src="../../../../../../assets/email.png" alt="Card image cap">
-    <div class="card-body">
-      <div class="edit-products d-flex justify-content-around gap-2">
-
-       <a href="">
-        <svg xmlns="http://www.w3.org/2000/svg" style="color: green;" width="50" height="50" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-        </svg>
-      </a>
-      <a href="">
-        <svg xmlns="http://www.w3.org/2000/svg" style="color: red;" width="50" height="50" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-        </svg>
-      </a>
-      </div>
     </div>
   </div>
-
-
-
 </div>
+
+<!--pop for adding a section-->
+<ng-template #content let-modal>
+  <!-- header-->
+
+  <form [formGroup]="add_section_form" (ngSubmit)="SendSection()">
+    <!-- body-->
+    <div class="modal-body">
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">ادخل اسم القسم</label><br><br>
+        <input type="text" formControlName="section_name" class="form-control">
+      </div>
+
+    </div>
+
+    <!-- footer-->
+    <div class="modal-footer" style="direction: ltr;">
+      <button type ="submit" class="btn btn-outline-danger">اضافة</button>
+    </div>
+  </form>
+</ng-template>
+
+
+
+<!--pop uo for adding a coupon-->
+<ng-template #content2 let-modal>
+  <!-- header-->
+
+  <form [formGroup]="add_coupon_form" (ngSubmit)="AddCoupon()">
+    <!-- body-->
+    <div class="modal-body">
+
+      <div class="form-group">
+        <label for="exampleInputPassword1" style="margin-bottom: 3px;">ادخل رمز الكوبون</label><br>
+        <input type="text" formControlName="code" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1" style="margin-bottom: 3px;">قيمة التخفيض</label><br>
+        <input type="number" formControlName="discount_amount" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">تاريخ الانتهاء</label><br>
+        <input type="date" formControlName="end_date" class="form-control">
+      </div>
+
+    </div>
+
+    <!-- footer-->
+    <div class="modal-footer" style="direction: ltr;">
+      <button (click)="AddCoupon()" class="btn btn-outline-danger">اضافة</button>
+    </div>
+  </form>
+</ng-template>
+
+
+
+
+
+
+<!--products table-->
+<div style="margin-top: 50px;">
+  <h4 style="margin-right: 100px;">المنتجات</h4>
+  <div class="container">
+    <button (click)="openModal(content1)"
+      style="float:left ; color: var(--primary-color); border: none; background-color:#fff ;"><i
+        class="bi bi-plus"></i>اضافة منتج</button>
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col" style="width:5px">صورة المنتج</th>
+          <th scope="col">وصف المنتج</th>
+          <th scope="col">الكمية</th>
+          <th scope="col">السعر</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><img src="../../../../../../assets/LazzaLogo-01.png" alt=""
+              style="width: 100px; border:solid 0.5px"></th>
+          <td style="width: 450px">طبق برجر مع بطاطس وشرائح دجاج مع ببس</td>
+          <td style="width: 10px;">45</td>
+          <td style="width: 10px;">30</td>
+          <td style="width: 15px;"><app-table-button statement="" type="btn btn-outline-danger" class="rest"
+              style="margin-top: 50px;">تعديل</app-table-button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--pop up for add a meal-->
+<ng-template #content1 let-modal>
+  <!-- header-->
+
+
+  <!-- body-->
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">اسم المنتج</label><br>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">وصف المنتج</label><br>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">السعر</label><br>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">الكمية</label><br>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">صورة المنتج</label><br>
+        <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+    </form>
+  </div>
+
+  <!-- footer-->
+  <div class="modal-footer" style="direction: ltr;">
+    <input type="submit" class="button" value="اضافة" style="background-color: var(--primary-color);">
+  </div>
+</ng-template>

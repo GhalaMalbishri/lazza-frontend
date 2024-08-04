@@ -35,3 +35,24 @@ export const ads_restaurant = {
     add_ads: BASEURL + 'ad'
   }
 }
+
+export const meals_restaurant = {
+  view_apdate_product:{
+    add_Section: BASEURL + 'section',
+    add_coupon: BASEURL + 'coupon'
+  }
+}
+
+export const tech_support_restaurant = {
+  cust_to_restaurant:{
+    show_cust_massages: BASEURL + 'ticket/list',
+    replay_to_cust: BASEURL + 'ticket/new-message'
+  }
+}
+
+export const orders_restaurant = {
+  user_order:{
+    //get all users order and put it in table
+    all_order: BASEURL + 'order/res-index',
+  }
+}

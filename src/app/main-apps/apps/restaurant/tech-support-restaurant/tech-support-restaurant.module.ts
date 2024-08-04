@@ -5,6 +5,7 @@ import { TechSupportRestaurantRoutingModule } from './tech-support-restaurant-ro
 import { CustToRestaurantComponent } from './cust-to-restaurant/cust-to-restaurant.component';
 import { RestaurantToAdminComponent } from './restaurant-to-admin/restaurant-to-admin.component';
 import { SharedComponentsModule } from 'src/app/shared-components/shared-components.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { SharedComponentsModule } from 'src/app/shared-components/shared-compone
   imports: [
     CommonModule,
     TechSupportRestaurantRoutingModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class TechSupportRestaurantModule { }

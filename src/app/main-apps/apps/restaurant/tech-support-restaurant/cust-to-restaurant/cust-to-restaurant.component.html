@@ -1,5 +1,5 @@
 <h2 class="main-text">رسائل العملاء</h2>
-<div class="main">
+<!-- <div class="main">
 
 
 
@@ -42,7 +42,53 @@
 
   </table>
 
-</div>
+</div> -->
+
+
+<table class="table table-hover text-center" style="margin-right: 100px; margin-left: 100px; margin-top: 25px; width: 1250px; " >
+  <thead>
+    <tr>
+      <th scope="col">العميل</th>
+      <th scope="col">البريد الالكتروني</th>
+      <th scope="col" >تفاصيل الرسالة</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th></th>
+      <td></td>
+      <td><app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest" (click)="openModal(content)" ></app-table-button></td>
+
+
+
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title"></h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <label for="">رسالة العميل</label>
+          <input type="text" value="" readonly style="width: 460px; height: 100px;">
+          <br>
+          <br>
+          <label for="" style="">رسالتك</label>
+          <input type="text" value="" style="width: 460px; height: 100px;">
+          <br>
+          <br>
+
+
+        </div>
+
+        <div class="modal-footer" style="direction: ltr;">
+          <app-table-button statement="ارسال" type="btn-outline-danger" class="rest" id="sent-button" ></app-table-button>
+        </div>
+      </ng-template>
+
+
+
+    </tr>
+  </tbody>
+</table>
 
 
 

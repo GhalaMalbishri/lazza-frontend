@@ -1,81 +1,94 @@
 <h2 class="main-text">الطلبات</h2>
-<div class="main">
 
+<div class="container">
+  <div class="table table">
 
+    <table class="table text-center">
+      <tr>
+        <th>رقم الطلب</th>
+        <th>رقم العميل</th>
+        <th>تفاصيل الطلب</th>
+        <th>حالة الطلب</th>
+      </tr>
 
-  <table >
-    <tr>
-
-      <th>الحـالـــة</th>
-      <th> تفاصيل الطلب</th>
-      <th>رقم الجوال</th>
-      <th>اسم العميل</th>
-      <th>رقم الطلب</th>
-
-
-
-    </tr>
-
-    <tr *ngFor="let i of arr">
-
-
-      <td style="display: flex; justify-content: space-evenly;"><a  routerLink="../popUp">  <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button></a>
-        <a  routerLink="../popUp">  <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button></a></td>
+      <tr *ngFor="let i of orders_array">
+        <td>{{i.id}}</td>
+        <td>{{i.customer_id}}</td>
         <td><app-table-button statement="تفاصيل" type="btn-outline-secondary" class="rest" (click)="openModal(content)"></app-table-button></td>
-        <td>{{i.custnum}}</td>
-        <td>{{i.email}}</td>
-        <td>{{i.name}}</td>
-    </tr>
-    <ng-template #content let-modal>
-      <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">تفاصيل الطلب</h4>
-      </div>
-      <div class="modal-body">
+        <td>
+          <app-table-button statement="رفض" type="btn-outline-danger" class="rest"></app-table-button>
+          <app-table-button statement="قبول" type="btn-outline-success" class="rest"></app-table-button>
+        </td>
 
-        <form class="needs-validation" novalidate>
-          <div class="form-row d-flex gap-1">
+        <ng-template #content let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">تفاصيل الطلب</h4>
+          </div>
+          <div class="modal-body">
 
-            <div class="col-md-4 mb-3">
-              <label for="validationCustom01">اسم الوجبه</label>
-              <input type="text" class="form-control" id="validationCustom01" value= {{i}} required readonly>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="validationCustom02">الكمية</label>
-              <input type="text" class="form-control" id="validationCustom02"  value={{i}} required readonly>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="validationCustom02">السعر</label>
-              <input type="text" class="form-control" id="validationCustom02"  value={{i}} required readonly>
+            <form class="needs-validation" novalidate>
+              <div class="form-row d-flex gap-1">
+
+                <table class="table text-center">
+
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">اسم الوجبه</th>
+                      <th scope="col">الكمية</th>
+                      <th scope="col">السعر</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th></th>
+                      <td>{{i.item_quantities[i].item.item_name}}</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="form-row d-flex gap-1">
+
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom02">اسم المندوب</label>
+                  <input type="text" class="form-control" id="validationCustom02" required readonly>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom02">رقم المندوب</label>
+                  <input type="text" class="form-control" id="validationCustom02" required readonly>
+                </div>
+
+              </div>
+
+
+            </form>
+          </div>
+
+          <div class="modal-footer" style="direction: ltr;">
+
+            <div class="d-flex  gap-2">
+              <app-table-button statement="رفض" type="btn-outline-danger" class="rest"
+                (click)="modal.close('Save click')"></app-table-button>
+              <app-table-button statement="قبول" type="btn-outline-success" class="rest"
+                (click)="modal.close('Save click')"></app-table-button>
             </div>
           </div>
-          <div class="form-row d-flex gap-1">
-
-            <div class="col-md-4 mb-3">
-              <label for="validationCustom02">اسم المندوب</label>
-              <input type="text" class="form-control" id="validationCustom02"  value={{i}} required readonly>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="validationCustom02">رقم المندوب</label>
-              <input type="text" class="form-control" id="validationCustom02"  value={{i}} required readonly>
-            </div>
-
-          </div>
+        </ng-template>
 
 
-        </form>
-      </div>
 
-      <div class="modal-footer">
+      </tr>
 
-        <div class="d-flex  gap-2">
-          <app-table-button statement="رفض" type="btn-outline-danger" class="rest" (click)="modal.close('Save click')"></app-table-button>
-          <app-table-button statement="قبول" type="btn-outline-success" class="rest" (click)="modal.close('Save click')"></app-table-button>
-         </div>
-      </div>
-    </ng-template>
 
-  </table>
 
+
+
+
+    </table>
+  </div>
 </div>
 
+<!--pop up-->
 

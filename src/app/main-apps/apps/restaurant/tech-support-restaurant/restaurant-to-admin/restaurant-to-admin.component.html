@@ -1,18 +1,12 @@
 <h2 class="main-text">تواصل مع المسؤول</h2>
 <div class="container">
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">اسم المطعم</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">البريد الالكتروني</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-  </div>
+  <form [formGroup]="massage_to_admin_form">
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">رسالتك</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" formControlName="massage" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <div class="mb-3">
-    <app-button anyting="أرسال" type="btn-outline-danger" class="rest"></app-button>
+</form>
+  <div class="mb-3 align-items-center">
+    <app-table-button statement="ارسال" type="btn-outline-danger" class="rest"></app-table-button>
   </div>
 </div>

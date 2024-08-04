@@ -11,39 +11,34 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./signup-customer.component.scss']
 })
 export class SignupCustomerComponent implements OnInit {
-  // signUp_Customer_form = {
-  //   name: null,
-  //   email: null,   // key must be like postman
-  //   phone: null,
-  //   national_id: null,
-  //   password: null,
-  // };
   signup_form = null;
+
   constructor(private impApiService:ImpApiService,private Route :Router,private fb: FormBuilder,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.signup_form = this.fb.group({
+      name: ['', Validators.required],
+      phone: ['', Validators.required],
       email: ['', Validators.email],
       password: ['', Validators.required],
-      name: ['', Validators.required],
-      National_id: ['', Validators.required],
-      phone_number: ['', Validators.required],
+      national_id: ['', Validators.required],
     })
   }
 
   signUp()
 {
 
-
   if (this.signup_form.invalid) {
     return this.toastr.error("خطا", "البيانات المدخلة غير صحيحة");
   }else{
-    this.toastr.success("تم التسجيل بنجاح");
+  console.log(this.signup_form);
+
     //    api     +     data                                           // if you want to see data use subscribe
-    this.impApiService.post(auth.register_customer,this.signup_form).subscribe(data=>{
+    this.impApiService.post(auth.register_customer,this.signup_form.value).subscribe(data=>{
     localStorage.setItem('user',data.data.user)
     localStorage.setItem('token',data.data.access_token) // للترتيب
     this.Route.navigate(['apps/customer-home/Customerhome-list'])
+    this.toastr.success("تم التسجيل بنجاح");
     console.log(data);
    })
   }

@@ -20,10 +20,12 @@ export class LoginComponent implements OnInit {
   constructor(private impApiService: ImpApiService, private Route: Router, private fb: FormBuilder, private toastr: ToastrService, private modalService: NgbModal , private spinner : NgxSpinnerService) { }
 
   ngOnInit(): void {
+
       this.loginForm = this.fb.group({
       email: ['', Validators.email],
       password: ['', Validators.required]
     })
+
   }
 
   login() {
@@ -34,6 +36,9 @@ export class LoginComponent implements OnInit {
     }
       this.spinner.show();
       this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
+
+      console.log(data);
+
       localStorage.setItem('user_type', data.data.user_type) // here i saved user_type in localStorage
       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
       localStorage.setItem('user', JSON.stringify(data.data))

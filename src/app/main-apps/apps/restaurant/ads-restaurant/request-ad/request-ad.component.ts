@@ -33,11 +33,6 @@ selectImg(event){
       return this.toastr.error("خطا", "يوجد بيانات فارغه");
     } else {
 
-
-
-
-
-      this.toastr.success("تم ارسال طلبك");
       console.log(this.add_new_ad_form.value);
 
       const form = new FormData()
@@ -48,6 +43,7 @@ selectImg(event){
       console.log(form);
 
       this.impApiService.post(ads_restaurant.request_ad.add_ads, form).subscribe(data => {
+        this.toastr.success("تم ارسال طلبك");
         console.log(data);
 
       })

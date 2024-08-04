@@ -36,7 +36,7 @@
 </div> -->
 
 
-<div class="container">
+<!-- <div class="container">
  <div class="text-and-logo">
   <img src="../../../assets/LazzaLogo-01.png" alt="" style="width:100 ; height: 100px;">
   <h3>اكمل المعلومات التالية</h3>
@@ -47,28 +47,80 @@
         <label for="1">اسم صاحب المطعم</label>
         <input type="text" id="1" class="form-control" placeholder="First name"><br>
         <label for="1">رقم الجوال</label>
-        <input type="text" class="form-control" placeholder="First name"><br>
+        <input type="text" class="form-control" placeholder="First name">
         <label for="1">البريد الالكتروني</label>
-        <input type="text" class="form-control" placeholder="First name"><br>
+        <input type="text" class="form-control" placeholder="First name">
         <label for="1">كلمة المرور</label>
-        <input type="text" class="form-control" placeholder="First name"><br>
+        <input type="text" class="form-control" placeholder="First name">
         <label for="1">اسم المطعم</label>
-        <input type="text" class="form-control" placeholder="First name"><br>
+        <input type="text" class="form-control" placeholder="First name">
       </div>
       <div class="col">
         <label for="1">وصف المطعم</label>
-        <input type="text" class="form-control" placeholder="Last name"><br>
+        <input type="text" class="form-control" placeholder="Last name">
         <label for="1">شعار المطعم</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file"><br>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
         <label for="1">صورة المطعم</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file"><br>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
         <label for="1">السجل التجاري</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file"><br>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
         <label for="">الشهادة الصحية</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file"><br>
+        <input class="form-control form-control-sm" id="formFileSm" type="file">
 
       </div>
       <app-button anyting="تسجيل" type="btn-outline-danger" class="rest"></app-button>
     </div>
   </form>
-</div>
+</div> -->
+
+<form [formGroup]="signup_restaurant_form" (ngSubmit)="signup_rest()">
+
+  <div class="container">
+
+    <div class="login form" style="position: relative;">
+      <img src="../../../assets/LazzaLogo-01.png" alt="" style="width:100 ; height: 100px; margin-right:4.8rem ;">
+      <header>تسجيل جديد</header>
+
+      <div class="horizontal">
+        <label for="1">اسم صاحب المطعم</label>
+        <input formControlName="name" type="text" id="1" class="form-control" >
+
+        <label for="1">رقم الجوال</label>
+        <input formControlName="phone" type="text" class="form-control" >
+
+        <label for="1">البريد الالكتروني</label>
+        <input formControlName="email" type="text" class="form-control" >
+
+        <label for="1">كلمة المرور</label>
+        <input formControlName="password" type="text" class="form-control" >
+
+        <label for="1">اسم المطعم</label>
+        <input formControlName="restaurant_name" type="text" class="form-control">
+
+        <label for="1">وصف المطعم</label>
+        <input formControlName="description" type="text" class="form-control" >
+
+        <label for="1">شعار المطعم</label>
+        <input formControlName="logo" class="form-control form-control-sm" id="formFileSm" type="file" (change)="selectImg($event)">
+
+        <label for="1">صورة المطعم</label>
+        <input formControlName="restaurant_photo" class="form-control form-control-sm" id="formFileSm" type="file" (change)="selectImg($event)">
+
+        <label for="1">السجل التجاري</label>
+        <input formControlName="commercial_register" class="form-control form-control-sm" id="formFileSm" type="file" (change)="selectImg($event)">
+
+        <label for="">الشهادة الصحية</label>
+        <input formControlName="health_certificate" class="form-control form-control-sm" id="formFileSm" type="file" (change)="selectImg($event)">
+     </div>
+
+      <input type="submit" class="button" value="سجل" style="background-color: var(--primary-color);">
+
+      <div class="signup">
+        <span class="signup"> لديك حساب ؟
+          <a routerLink="/auth/log-in"><label for="check" style="color: var(--primary-color);">سجل دخول</label></a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</form>

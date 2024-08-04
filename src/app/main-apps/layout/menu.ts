@@ -96,25 +96,14 @@ export const MENU = [
     link: '/apps/restaurant-user-order/orders-restaurant-list',
     user_type: [2],
   },
-
-
   {
-    label: 'الوجبات',
-    isTitle: true,
+    label: 'المنتجات',
+    isTitle: false,
+    link: '/apps/meals-restaurant/restaurant-view-update-products-list',
     user_type: [2],
-    subItems: [
-      {
-        label: 'عرض الوجبات',
-        link: '/apps/meals-restaurant/restaurant-view-update-products-list',
-        user_type: [2],
-      },
-      {
-        label: 'طلبات الاعلانات',
-        link: '/apps/meals-restaurant/restaurant-add-products-list',
-        user_type: [2],
-      },
-    ]
   },
+
+
 
   {
     label: 'الاعلانات',

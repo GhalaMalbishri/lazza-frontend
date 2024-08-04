@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ImpApiService } from 'src/app/services/imp-api.service';
+import { Customer_home } from 'src/constent/Route';
 
 @Component({
   selector: 'app-view-restaurant',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewRestaurantComponent implements OnInit {
 
-  constructor() { }
+  arr_restaurant_card: any
 
-  ngOnInit(): void {
-  }
+  constructor(private impApiService: ImpApiService, private Route: Router) { }
+
+  ngOnInit() {
+
+
+
+    this.get_Restaurant();
+
+      }
+
+      get_Restaurant(){
+
+        this.impApiService.get(Customer_home.restaurant_card.getCard).subscribe(
+          (res) => {
+            console.log(res.data);
+            this.arr_restaurant_card = res.data.filter((item) => item !== null);
+            
+          }
+        );
+
+      }
+
 
 }

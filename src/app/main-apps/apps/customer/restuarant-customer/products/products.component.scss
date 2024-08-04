@@ -23,28 +23,7 @@
   margin-bottom: 3%;
 }
 
-.category{
-  display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
-  border-radius: 1rem;
-  justify-content: end;
-  align-items: center;
-  width: 15%;
-}
 
-.category > img{
-  max-width: 40%;
-  max-height: 40%;
-  padding-left: 3%;
-  padding-right: 3%;
-
-}
-
-.ProductsContaner{
-  display: flex;
-  padding-bottom: 5%;
- justify-content: center;
-}
 
 /* remove below */
 .Card-container{
@@ -69,44 +48,14 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a drop shadow on hover */
   }
 
-  h6{
-    margin-bottom: 10%;
-  }
+  
 
-  .restImg{
-   background-color: var( --card-img-color);
-   border-radius: 20px;
-   display: flex;
-   height: 70%;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-
-  }
-
-  .restImg >div{
-  align-self: center;
-  margin: 10px;
-  }
-
-  .restImg >img{
-    max-width: 70%;
-    max-height: 70%;
+   .content{
+    margin-top: 35px;
     display: flex;
-    padding-right: 0%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-   }
-
-   .productDescrption{
-    display: flex;
-    justify-content: space-between;
-   }
-
-
-.ProductsContaner{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-}

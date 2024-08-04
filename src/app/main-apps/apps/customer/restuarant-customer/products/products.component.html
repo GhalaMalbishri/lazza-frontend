@@ -1,72 +1,75 @@
-<div class="restName">
-  <p>### مطعم</p>
-</div>
+<div class="container">
 
-<section class="categories">
-
-  <!--category 1-->
-  <div class="category">
-    <p>#####</p>
-    <img src="./../../../../../../../assets/email.png" alt="category 1">
+  <!--restaurant name-->
+  <div class="row"> <!-- 1 -->
+    <h2 style="color: var(--primary-color);">مطعم ####</h2>
   </div>
 
-  <!--category 2-->
-  <div class="category">
-    <p>#####</p>
-    <img src="./../../../../../../../assets/email.png" alt="category 1">
+  <!--categories-->
+  <div class="row"><!-- 2 -->
+
+
   </div>
 
-  <!--category 3-->
-  <div class="category">
-    <p>#####</p>
-    <img src="./../../../../../../../assets/email.png" alt="category 1">
+  <div class="row"><!-- 3 -->
+    <hr>
   </div>
 
-  <!--category 4-->
-  <div class="category">
-    <p>#####</p>
-    <img src="./../../../../../../../assets/email.png" alt="category 1">
-  </div>
+  <div class="row"><!-- 4 -->
 
-</section>
+    <div class="content">
 
-<hr style="width: 90%;  margin-bottom: 5%;">
+      <div class="contain row" >
+        <div class="card " style="width: 12rem; border-radius: 10px;">
+          <img src="./../../../../../../assets/star.png" class="card-img-top " alt="...">
 
-<!-- to be replaced with selector pf product card-->
+          <div class="card-body row" style="display: flex; justify-content: space-around; ">
+            <p class="col text-center">product name</p>
+            <p class="col text-center">222</p>
+          </div>
 
-<div class="ProductsContaner" *ngFor="let item of arr">
+          <div class="card-body">
+            <a (click)="openModal(content)">  <app-table-button  statement="إضافة" type="btn-outline-danger"
+              class="rest"></app-table-button> </a>
+          </div>
+        </div>
+      </div>
 
 
-  <!-- product card 1-->
-  <div class="Card-container">
 
-    <div class="restImg">
-      <img src="./../../../assets/food_bar.png" alt="restaurant">
     </div>
 
-    <div class="productDescrption">
-
-
-      <h5>0000SAR</h5>
-      <P>طبق ###</P>
-
-    </div>
-  </div>
-  <div class="Card-container">
-
-    <div class="restImg">
-      <img src="./../../../assets/food_bar.png" alt="restaurant">
-    </div>
-
-    <div class="productDescrption">
-
-
-      <h5>0000SAR</h5>
-      <P>طبق ###</P>
-
-    </div>
   </div>
 
 
+   <!-- modal-->
+   <ng-template #content let-modal>
+    <!-- header-->
+    <div class="modal-header">
+
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+
+    <!-- body-->
+    <div class="modal-body">
+
+      <div class="container">
+
+        <div class="col-1">
+          <p>aaaaaaaaaa</p>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+    <!-- footer-->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
+    </div>
+  </ng-template>
 
 </div>

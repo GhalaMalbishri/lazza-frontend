@@ -36,10 +36,12 @@ export class LoginComponent implements OnInit {
     }
       this.spinner.show();
       this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
+
       console.log(data);
 
       localStorage.setItem('user_type', data.data.user_type) // here i saved user_type in localStorage
       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
+      localStorage.setItem('user', JSON.stringify(data.data))
 
       if (data.data.user_type == 2) {
         this.Route.navigate(['/apps/restaurant-home/restaurantHome-list'])
@@ -53,6 +55,7 @@ export class LoginComponent implements OnInit {
       this.spinner.hide();
     })
   }
+
   openModal(modal) {
     this.modalService.open(modal, { centered: true })
   }

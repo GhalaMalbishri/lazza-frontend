@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  api:'https://lazza-abdulmajeed.firstcity.ai/api/',
+  api:'http://192.168.8.104:8000/api/',
   production: false
 };
 

@@ -6,15 +6,15 @@
 
   <!-- filtering tabels: each one has a different tabel-->
 
-<!-- <div style="background-color: var(--white);"> -->
-<select name="" id="" (change)="filter_by_status($event.target.value)" *ngIf="!loading" style=" margin-bottom: 1rem;">
-  <option value="">تصفية حسب الحالة</option>
-  <option value="مفعّل">مفعّل</option>
-  <option value="غير مفعّل">غير مفعّل</option>
-</select>
+  <!-- <div style="background-color: var(--white);"> -->
+  <select name="" id="" (change)="filter_by_status($event.target.value)" *ngIf="!loading" style=" margin-bottom: 1rem;">
+    <option value="">تصفية حسب الحالة</option>
+    <option value="مفعّل">مفعّل</option>
+    <option value="غير مفعّل">غير مفعّل</option>
+  </select>
 
 
-<app-loader *ngIf="loading"></app-loader>
+  <app-loader *ngIf="loading"></app-loader>
 
   <table class="table" *ngIf="loading == false">
 
@@ -37,7 +37,44 @@
         <td>{{i.phone}}</td>
         <td> <a (click)="openModal(content)"> <app-table-button statement="تفاصيل" type="btn-outline-secondary"
               class="rest"></app-table-button></a></td>
-              <td [style.color]="i.account_status == 'مفعّل' ? 'green' : 'var(--primary-color)'">{{i.account_status}}</td>
+        <td [style.color]="i.account_status == 'مفعّل' ? 'green' : 'var(--primary-color)'">{{i.account_status}}</td>
+
+
+
+
+        <!-- modal-->
+        <ng-template #content let-modal>
+          <!-- header-->
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">معلومات الدفع</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+          </div>
+
+          <!-- body-->
+          <div class="modal-body">
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" readonly>
+
+            <div class="card-detils">
+              <input class="name-of-holder" type="text" placeholder="اسم حامل البطاقة"><br>
+              <input class="card-number" type="number" placeholder="{{i.name}}" readonly>
+            </div>
+
+            <div class="card-numbers">
+              <input type="date" placeholder="تاريخ الانتهاء">
+              <input type="number" placeholder="رقم CVV">
+            </div>
+
+          </div>
+
+          <!-- footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
+          </div>
+        </ng-template>
+
+
 
 
 
@@ -50,34 +87,6 @@
   <p *ngIf="arr.length == 0">لا يوجد بيانات</p>
 
 
-  <!-- modal-->
-  <ng-template #content let-modal>
-    <!-- header-->
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">معلومات الدفع</h4>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-
-     <!-- body-->
-    <div class="modal-body">
-
-      <div class="card-detils">
-        <input class="name-of-holder" type="text" placeholder="اسم حامل البطاقة"><br>
-        <input class="card-number" type="number" placeholder="رقم البطاقة" readonly>
-      </div>
-
-      <div class="card-numbers">
-        <input type="date" placeholder="تاريخ الانتهاء" >
-        <input type="number" placeholder="رقم CVV">
-      </div>
-
-    </div>
-
-     <!-- footer-->
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
-    </div>
-  </ng-template>
 
 
 </div>

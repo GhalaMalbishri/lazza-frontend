@@ -36,6 +36,7 @@ export const ads_restaurant = {
   }
 }
 
+
 export const meals_restaurant = {
   view_apdate_product:{
     add_Section: BASEURL + 'section',
@@ -55,4 +56,19 @@ export const orders_restaurant = {
     //get all users order and put it in table
     all_order: BASEURL + 'order/res-index',
   }
+
+//customer
+
+export const Customer_home = {
+
+  restaurant_ad:{
+    // ممكن الكومبونت ذا له اكثر من api
+    show_ad : BASEURL + 'ad/active-ads'
+
+  },
+
+  restaurant_card:{
+     getCard: BASEURL + 'restaurant/restaurants-cards'
+  },
+
 }

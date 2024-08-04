@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ImpApiService } from 'src/app/services/imp-api.service';
 
 @Component({
   selector: 'app-products',
@@ -8,46 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   arr:any;
 
-  constructor() {
-    this.arr = [
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
-      {
-        name: 'burger',
-        price: 100,
-      },
+  constructor(private impApiService: ImpApiService, private Route: Router, private modalService: NgbModal) {
 
-
-    ]
   }
 
   ngOnInit(): void {
+  }
+
+  openModal(modal) {
+    this.modalService.open(modal, { size: 'md' })
   }
 
 }

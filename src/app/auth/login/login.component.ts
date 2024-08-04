@@ -32,23 +32,25 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return this.toastr.error("خطا", "البيانات المدخلة غير صحيحة");
     }
-     this.spinner.show();
+      this.spinner.show();
       this.impApiService.post(auth.login, this.loginForm.value).subscribe(data => {
-      localStorage.setItem('user_type', data.data.user_type_id) // here i saved user_type in localStorage
+      localStorage.setItem('user_type', data.data.user_type) // here i saved user_type in localStorage
       localStorage.setItem('token', data.access_token) //  here i saved user_type in localStorage
+      localStorage.setItem('user', JSON.stringify(data.data))
 
-      if (data.data.user_type_id == 2) {
+      if (data.data.user_type == 2) {
         this.Route.navigate(['/apps/restaurant-home/restaurantHome-list'])
       }
-      if (data.data.user_type_id == 1) {
+      if (data.data.user_type == 1) {
         this.Route.navigate(['/apps/admin-home-main/adminHomeMain-list'])
       }
-      if (data.data.user_type_id == 3) {
+      if (data.data.user_type == 3) {
         this.Route.navigate(['/apps/customer-home/Customerhome-list'])
       }
       this.spinner.hide();
     })
   }
+
   openModal(modal) {
     this.modalService.open(modal, { centered: true })
   }

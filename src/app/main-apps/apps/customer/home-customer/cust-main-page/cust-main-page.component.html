@@ -1,112 +1,136 @@
-<!--
+<div class="container">
+
+
+  <!--
 
 <div style="text-align: center; padding-bottom: 20px;">
 
   <img src="./../../../../../../assets/lazza-slogan.png" height="400px" width="1000px border-radius: 1rem;" >
 
-</div>
+</div> -->
 
 
-<!-- map container-->
-<div class="MapContainer" >
-
-  <!--1st -->
-  <img src="./../../../../../../assets/map.png" alt="">
-
-  <!--2nd -->
-  <section class="MapDescription" >
-    <h2 >أكثر من 100+ مطعم</h2>
-    <p>في مناطق مختلفة في السعودية</p>
-    <p>تصفح المطاعم القريبة منك من خلال الخريطة</p>
-    <app-button  anyting="حدد موقعك" type="btn-outline-danger" (click)="openModal(content)" class="rest"></app-button>
-  </section>
 
 
-</div>
-
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title"></h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-  </div>
-  <div class="modal-body">
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19734.13800669317!2d39.871916132003825!3d21.420420299464716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204633c80e23f%3A0x8925f03717869757!2z2KfZhNio2YrZgw!5e0!3m2!1sar!2ssa!4v1721914104356!5m2!1sar!2ssa" width="470" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-  </div>
-
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
-  </div>
-</ng-template>
-<!-- banner for ADs-->
-
-<div class="ads-container">
-  <div class="ads-item active">
-    <img src="./../../../../../../assets/ad.png" width="100%" alt="Ad 1">
-  </div>
-  <div class="ads-item">
-    <img src="./../../../../../../assets/star.png" alt="Ad 2">
-  </div>
-  <div class="ads-item">
-    <img src="./../../../../../../assets/food_bar.png" alt="Ad 3">
-  </div>
-  <div class="ads-item">
-    <img src="ad4.jpg" alt="Ad 4">
-  </div>
-  <div class="ads-item">
-    <img src="ad5.jpg" alt="Ad 5">
-  </div>
-</div>
 
 
-  <!-- labels (مطاعم / تصفح المزيد) and cards-->
-<div class="labelsContaner">
 
-  <!-- child 1-->
-   <a class="viewMore" href="">
+  <!-- map container-->
+  <div class="row">
+    <div class="MapContainer">
 
-      <div>
-
-        <!-- img-->
-       <a routerLink="../../restuarant-customer"> <h4>تصفح المزيد</h4></a>
-
+      <div class="col"><!--1st -->
+        <section class="MapDescription">
+          <h2>أكثر من 100+ مطعم</h2>
+          <p>في مناطق مختلفة في السعودية</p>
+          <p>تصفح المطاعم القريبة منك من خلال الخريطة</p>
+          <app-button anyting="حدد موقعك" type="btn-outline-danger" (click)="openModal(content)"
+            class="rest"></app-button>
+        </section>
       </div>
-   </a>
 
-<!-- child 2-->
- <!-- <h3 class="restsLabel">المطاعم</h3> -->
+      <div class="col"> <!--2nd -->
+        <img src="./../../../../../../assets/map.png" width="100%" height="140%" alt="">
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- map -->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"></h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19734.13800669317!2d39.871916132003825!3d21.420420299464716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204633c80e23f%3A0x8925f03717869757!2z2KfZhNio2YrZgw!5e0!3m2!1sar!2ssa!4v1721914104356!5m2!1sar!2ssa"
+        width="470" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">حفظ</button>
+    </div>
+  </ng-template>
+
+  <!--  slider banner for ADs-->
+
+  <div id="carouselExample" class="carousel slide" style="margin-bottom: 20px;">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" style="background-color: var(--primary-color); border-radius: 10px;">
+        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 " style="border-radius: 10px;" width="800"
+          height="200" src="./../../../../../../assets/add.png" role="img" aria-label="Placeholder: First slide"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="200"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second
+            slide</text>
+        </svg>
+      </div>
+
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="200"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third
+            slide</text>
+        </svg>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"
+      fdprocessedid="0691nr">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"
+      fdprocessedid="eng29d">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+  <!-- labels (مطاعم / تصفح المزيد) -->
+  <div class="row " style="margin-bottom: 20px;">
+
+    <div class="col">
+      <h2 style="color: var(--primary-color);">المطاعم</h2>
+    </div>
+
+    <div class="col-2"><a class="nav-link" routerLink="/apps/customer-view-rest/customerViewRest-list">
+        <h5 style="color: var(--primary-color);">تصفح المزيد </h5>
+      </a> </div>
+
+
+  </div>
+
+  <!-- restaurants-->
+  <div class="horizontal-scroll">
+
+    <div class="contain" *ngFor="let i of arr_restaurant_card">
+      <div class="card " style="width: 9rem; border-radius: 10px;">
+        <img src="./../../../../../../assets/star.png" class="card-img-top" alt="...">
+        <div class="card-body ">
+          <p class="text-center"> {{i.restaurant_name}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
-
-<div class="someRestaurants">
-
-  <div class="card" style="width: 13rem;">
-    <img src="../../../../../../assets/star.png" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <p class="text-center">مطعم ###</p>
-    </div>
-  </div>
-  <div class="card" style="width: 13rem;">
-    <img src="../../../../../../assets/star.png" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <p class="text-center">مطعم ###</p>
-    </div>
-  </div>
-  <div class="card" style="width: 13rem;">
-    <img src="../../../../../../assets/star.png" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <p class="text-center">مطعم ###</p>
-    </div>
-  </div>
-  <div class="card" style="width: 13rem;">
-    <img src="../../../../../../assets/star.png" class="card-img-top" alt="...">
-    <div class="card-body ">
-      <p class="text-center">مطعم ###</p>
-    </div>
-  </div>
-
-
-</div>
-
-
